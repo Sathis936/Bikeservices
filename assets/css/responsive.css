@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Rent o Ride - Mobile-First Responsive Breakpoints Stylesheet
+   Guarantees pixel-perfect rendering from 320px to 1600px+
+   ========================================================================== */
+
+/* Max Width 575px (Mobile Phones: 320px - 575px) */
+@media (max-width: 575.98px) {
+  html {
+    font-size: 15px;
+  }
+
+  .hero-section {
+    padding: 2.75rem 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-lead {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-padding {
+    padding: 2.75rem 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.875rem;
+  }
+
+  /* Booking Widget on Mobile */
+  .booking-widget-card {
+    padding: 1.15rem;
+    margin-top: -1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .booking-widget-card .row.g-3 {
+    --bs-gutter-y: 0.75rem;
+  }
+
+  /* Scooter Cards on Mobile */
+  .scooter-card-body {
+    padding: 1.1rem;
+  }
+
+  .scooter-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    margin: 0.75rem 0 1rem;
+    padding: 0.6rem 0;
+  }
+
+  .spec-item {
+    font-size: 0.75rem;
+  }
+
+  .price-amount {
+    font-size: 1.35rem;
+  }
+
+  .price-unit {
+    font-size: 0.75rem;
+  }
+
+  /* Mobile Navbar Actions */
+  .navbar-actions {
+    gap: 0.3rem !important;
+  }
+
+  .navbar-actions .btn-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.875rem;
+    border-radius: 8px;
+  }
+
+  .navbar-actions .rtl-toggle-btn {
+    font-size: 0.6rem;
+    padding: 0 4px !important;
+  }
+
+  .brand-logo-img {
+    height: 32px !important;
+  }
+
+  /* Dashboard on Small Mobile */
+  .dashboard-topbar {
+    height: 60px;
+    padding: 0 0.85rem;
+  }
+
+  .dashboard-topbar h5 {
+    font-size: 1rem;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .dashboard-topbar .navbar-actions {
+    gap: 0.25rem;
+  }
+
+  .dashboard-topbar .navbar-actions .btn-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  .dashboard-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .stat-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .floating-stat-card {
+    display: none !important;
+  }
+
+  /* Auth Forms on Mobile */
+  .card.p-4.p-md-5 {
+    padding: 1.5rem 1.15rem !important;
+  }
+
+  .auth-icon-wrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .auth-icon-wrap i {
+    font-size: 1.75rem;
+  }
+
+  /* Tables */
+  .table-responsive {
+    border: none;
+    margin-bottom: 0;
+  }
+
+  .table-responsive table {
+    font-size: 0.85rem;
+  }
+
+  /* Footer on Mobile */
+  .site-footer {
+    padding-top: 3rem;
+  }
+
+  .footer-heading {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links li a {
+    font-size: 0.875rem;
+  }
+}
+
+/* Medium Tablets (576px - 991px) */
+@media (max-width: 991.98px) {
+  .dashboard-sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 1050;
+    box-shadow: var(--shadow-xl);
+  }
+  .dashboard-sidebar.show {
+    left: 0;
+  }
+  [dir="rtl"] .dashboard-sidebar {
+    left: auto;
+    right: -280px;
+  }
+  [dir="rtl"] .dashboard-sidebar.show {
+    right: 0;
+  }
+  .sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    z-index: 1040;
+    display: none;
+    transition: opacity 0.25s ease;
+  }
+  .sidebar-backdrop.show {
+    display: block;
+  }
+  .hero-image-wrap {
+    margin-top: 2rem;
+  }
+}
+
+/* Large Screens (1200px+) */
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-xl {
+    max-width: 1240px;
+  }
+}
+
+/* Ultra Wide Screens (1400px+) */
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-xl, .container-xxl {
+    max-width: 1360px;
+  }
+}

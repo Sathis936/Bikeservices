@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Rent o Ride Customer Portal</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+  
+  <div class="sidebar-backdrop"></div>
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-brand d-flex justify-content-between align-items-center">
+      <a href="index.html"><img src="assets/images/logo.svg" alt="Rent o Ride" class="brand-logo-img" height="34"></a>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="sidebar-heading">Rider Account</div>
+      <a href="#tab-overview" class="sidebar-link active" data-dash-tab="tab-overview">
+        <i class="bi bi-grid-1x2-fill"></i> <span>Overview</span>
+      </a>
+      <a href="#tab-fleet" class="sidebar-link" data-dash-tab="tab-fleet">
+        <i class="bi bi-bicycle"></i> <span>Browse Models</span>
+      </a>
+      <a href="#tab-book" class="sidebar-link" data-dash-tab="tab-book">
+        <i class="bi bi-calendar-plus-fill"></i> <span>Book a Rental</span>
+      </a>
+      <a href="#tab-rentals" class="sidebar-link" data-dash-tab="tab-rentals">
+        <i class="bi bi-lightning-charge-fill text-warning"></i> <span>My Rentals &amp; Receipts</span>
+        <span class="badge bg-success-soft ms-auto small" id="sideActiveBadge">LIVE</span>
+      </a>
+      <a href="wishlist.html" class="sidebar-link ">
+        <i class="bi bi-heart-fill text-danger"></i> <span>Saved Wishlist</span>
+      </a>
+
+      <div class="sidebar-heading mt-3">Preferences</div>
+      <a href="profile.html" class="sidebar-link ">
+        <i class="bi bi-person-badge-fill"></i> <span>Profile &amp; License</span>
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <i class="bi bi-arrow-left-circle"></i> <span>Back to Website</span>
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-3">
+        <img src="assets/images/testimonials/avatar-1.svg" class="rounded-circle" width="40" height="40" alt="Alex Vance">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-truncate">Alex Vance</div>
+          <div class="text-muted" style="font-size: 0.725rem;">Verified Rider</div>
+        </div>
+        <a href="login.html" class="ms-auto text-danger" title="Logout"><i class="bi bi-box-arrow-right fs-5"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-main">
+    
+  <header class="dashboard-topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-sm btn-icon btn-outline-secondary dashboard-sidebar-toggle d-lg-none">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <h5 class="fw-bold mb-0">Customer Dashboard</h5>
+    </div>
+
+    <div class="d-flex align-items-center gap-3 navbar-actions">
+      <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-outline-primary rtl-toggle-btn fw-bold" title="Toggle LTR/RTL Layout" aria-label="Toggle Direction">RTL</button>
+      <div class="dropdown">
+        <button class="btn btn-icon btn-outline-secondary position-relative" type="button" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" style="width: 280px;">
+          <li class="dropdown-header fw-bold">Notifications</li>
+          <li><a class="dropdown-item small" href="#tab-rentals" data-dash-tab="tab-rentals"><i class="bi bi-lightning-charge text-success me-2"></i> Your ride is live - return due soon</a></li>
+          <li><a class="dropdown-item small" href="#tab-rentals" data-dash-tab="tab-rentals"><i class="bi bi-download text-primary me-2"></i> New receipts ready to download</a></li>
+        </ul>
+      </div>
+      <a href="#tab-book" class="btn btn-sm btn-primary d-none d-sm-inline-flex" data-dash-tab="tab-book"><i class="bi bi-plus-lg me-1"></i> Rent Scooter</a>
+    </div>
+  </header>
+
+    <main class="dashboard-content">
+      <!-- Tab Navigation -->
+      <ul class="nav nav-pills dash-tabs mb-4 gap-2 flex-nowrap overflow-auto">
+        <li class="nav-item"><button class="nav-link active fw-bold text-nowrap" data-bs-toggle="pill" data-bs-target="#tab-overview" type="button"><i class="bi bi-grid-1x2 me-1"></i> Overview</button></li>
+        <li class="nav-item"><button class="nav-link fw-bold text-nowrap" data-bs-toggle="pill" data-bs-target="#tab-fleet" type="button"><i class="bi bi-bicycle me-1"></i> Browse Models</button></li>
+        <li class="nav-item"><button class="nav-link fw-bold text-nowrap" data-bs-toggle="pill" data-bs-target="#tab-book" type="button"><i class="bi bi-calendar-plus me-1"></i> Book a Rental</button></li>
+        <li class="nav-item"><button class="nav-link fw-bold text-nowrap" data-bs-toggle="pill" data-bs-target="#tab-rentals" type="button"><i class="bi bi-receipt me-1"></i> My Rentals &amp; Receipts</button></li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- ============ TAB: OVERVIEW ============ -->
+        <div class="tab-pane fade show active" id="tab-overview">
+          <!-- 4 Stat Metric Cards -->
+          <div class="row g-4 mb-4">
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card">
+                <div>
+                  <div class="text-muted small fw-bold text-uppercase">Active Rental</div>
+                  <h3 class="fw-bold mb-0 mt-1" id="statActive">0 Live</h3>
+                  <small class="text-success fw-semibold" id="statActiveNote"><i class="bi bi-activity"></i> Idle</small>
+                </div>
+                <div class="stat-icon bg-success-soft text-success"><i class="bi bi-lightning-charge"></i></div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card">
+                <div>
+                  <div class="text-muted small fw-bold text-uppercase">Total Bookings</div>
+                  <h3 class="fw-bold mb-0 mt-1" id="statTrips">0 Trips</h3>
+                  <small class="text-muted">All-time rides</small>
+                </div>
+                <div class="stat-icon bg-primary-soft text-primary"><i class="bi bi-calendar2-check"></i></div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card">
+                <div>
+                  <div class="text-muted small fw-bold text-uppercase">Reward Points</div>
+                  <h3 class="fw-bold mb-0 mt-1" id="statPoints">0 Pts</h3>
+                  <small class="text-primary fw-semibold">₹0 redemption value</small>
+                </div>
+                <div class="stat-icon bg-warning-soft text-warning"><i class="bi bi-star"></i></div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card">
+                <div>
+                  <div class="text-muted small fw-bold text-uppercase">Total Spent</div>
+                  <h3 class="fw-bold mb-0 mt-1" id="statSpent">₹0</h3>
+                  <small class="text-muted" id="statAvg">Average -/ride</small>
+                </div>
+                <div class="stat-icon bg-info-soft text-info"><i class="bi bi-wallet2"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Rental Highlight Banner (rendered by JS) -->
+          <div id="liveBannerHost"></div>
+
+          <!-- Chart & Recent Trips -->
+          <div class="row g-4 mb-4">
+            <div class="col-lg-5">
+              <div class="card border rounded-4 p-4 bg-white shadow-sm h-100">
+                <h6 class="fw-bold mb-3">Rental Expenses (Last 6 Months)</h6>
+                <div style="height: 240px;">
+                  <canvas id="customerSpendingChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="card border rounded-4 p-4 bg-white shadow-sm h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h6 class="fw-bold mb-0">Recent Bookings</h6>
+                  <a href="#tab-rentals" class="small text-primary fw-bold" data-dash-tab="tab-rentals">View All &rarr;</a>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-custom table-hover align-middle">
+                    <thead>
+                      <tr>
+                        <th>Booking ID</th>
+                        <th>Scooter</th>
+                        <th>Dates</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="recentBookingsBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ TAB: BROWSE MODELS ============ -->
+        <div class="tab-pane fade" id="tab-fleet">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h5 class="fw-bold mb-1">Available Scooter Models</h5>
+              <p class="text-muted small mb-0">Live availability across all stations. Pick any available model to start a booking.</p>
+            </div>
+            <span class="badge bg-success-soft px-3 py-2" id="availCountBadge">-</span>
+          </div>
+          <div class="row g-4" id="fleetAvailabilityGrid"></div>
+        </div>
+
+        <!-- ============ TAB: BOOK A RENTAL ============ -->
+        <div class="tab-pane fade" id="tab-book">
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card border rounded-4 p-4 p-md-5 bg-white shadow-sm">
+                <h5 class="fw-bold mb-1">Book Your Next Ride</h5>
+                <p class="text-muted small">Choose your preferred model, pickup date, and rental duration.</p>
+                <form id="quickBookingForm" class="needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label class="form-label small fw-bold text-muted text-uppercase" for="qbkModel">Preferred Model</label>
+                    <select id="qbkModel" class="form-select" required></select>
+                    <div class="invalid-feedback">Please choose an available scooter.</div>
+                  </div>
+                  <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label small fw-bold text-muted text-uppercase" for="qbkPickup">Pickup Date</label>
+                      <input type="date" id="qbkPickup" class="form-control" required>
+                      <div class="invalid-feedback">Pick a valid pickup date.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label small fw-bold text-muted text-uppercase" for="qbkDays">Duration (days)</label>
+                      <div class="input-group">
+                        <button class="btn btn-outline-secondary" type="button" id="qbkDaysMinus"><i class="bi bi-dash"></i></button>
+                        <input type="number" id="qbkDays" class="form-control text-center" min="1" max="30" value="3" required>
+                        <button class="btn btn-outline-secondary" type="button" id="qbkDaysPlus"><i class="bi bi-plus"></i></button>
+                      </div>
+                      <div class="invalid-feedback">Duration must be 1-30 days.</div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label class="form-label small fw-bold text-muted text-uppercase" for="qbkStation">Pickup Station</label>
+                    <select id="qbkStation" class="form-select">
+                      <option>Downtown Hub (Station 1)</option>
+                      <option>Airport Express Hub (Station 2)</option>
+                      <option>Beachfront Promenade (Station 3)</option>
+                    </select>
+                  </div>
+                  <div class="p-3 bg-light rounded-3 mb-4 d-flex justify-content-between align-items-center">
+                    <span class="text-muted small fw-bold text-uppercase">Estimated Total</span>
+                    <span class="fs-4 fw-bold text-primary" id="qbkTotal">₹0</span>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg w-100"><i class="bi bi-calendar-check-fill me-1"></i> Confirm Booking</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="card border rounded-4 overflow-hidden bg-white shadow-sm mb-4" id="qbkPreviewCard"></div>
+              <div class="card border rounded-4 p-4 bg-white shadow-sm">
+                <h6 class="fw-bold mb-3">Included with every rental</h6>
+                <ul class="list-unstyled text-muted small mb-0">
+                  <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Sanitized helmet &amp; lock kit</li>
+                  <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> 24/7 roadside assistance</li>
+                  <li class="mb-2"><i class="bi bi-check2-circle text-primary me-2"></i> Free cancellation up to 24h before pickup</li>
+                  <li><i class="bi bi-check2-circle text-primary me-2"></i> Refundable security deposit</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ TAB: MY RENTALS & RECEIPTS ============ -->
+        <div class="tab-pane fade" id="tab-rentals">
+          <h5 class="fw-bold mb-3">Active Rental</h5>
+          <div id="activeRentalHost" class="mb-5"></div>
+
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold mb-0">Past Rentals - Receipts &amp; Agreements</h5>
+          </div>
+          <div class="card border rounded-4 p-4 bg-white shadow-sm">
+            <div class="table-responsive">
+              <table class="table table-custom table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>Booking ID</th>
+                    <th>Scooter</th>
+                    <th>Rental Period</th>
+                    <th>Total</th>
+                    <th class="text-end">Documents</th>
+                  </tr>
+                </thead>
+                <tbody id="pastRentalsBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chartjs/chart.umd.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/customer-dashboard.js"></script>
+</body>
+</html>

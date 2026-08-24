@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleet Inventory Management | Rent o Ride Admin Portal</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+  
+  <div class="sidebar-backdrop"></div>
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-brand d-flex justify-content-between align-items-center">
+      <a href="admin-dashboard.html"><img src="assets/images/logo.svg" alt="Rent o Ride Admin" class="brand-logo-img" height="34"></a>
+      <span class="badge bg-primary-soft small">ADMIN</span>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="sidebar-heading">Operations</div>
+      <a href="admin-dashboard.html" class="sidebar-link ">
+        <i class="bi bi-speedometer2"></i> <span>Dashboard</span>
+      </a>
+      <a href="admin-bookings.html" class="sidebar-link ">
+        <i class="bi bi-calendar2-range-fill"></i> <span>Bookings</span>
+      </a>
+      <a href="admin-scooters.html" class="sidebar-link active">
+        <i class="bi bi-bicycle"></i> <span>Fleet Inventory</span>
+      </a>
+      <a href="admin-orders.html" class="sidebar-link ">
+        <i class="bi bi-bag-check-fill"></i> <span>Add-on Orders</span>
+      </a>
+      <a href="admin-users.html" class="sidebar-link ">
+        <i class="bi bi-people-fill"></i> <span>Customer Users</span>
+      </a>
+
+      <div class="sidebar-heading mt-3">Financials &amp; Support</div>
+      <a href="admin-payments.html" class="sidebar-link ">
+        <i class="bi bi-credit-card-2-front-fill"></i> <span>Payments &amp; Escrow</span>
+      </a>
+      <a href="admin-messages.html" class="sidebar-link ">
+        <i class="bi bi-chat-left-text-fill"></i> <span>Support Messages</span>
+      </a>
+      <a href="admin-reviews.html" class="sidebar-link ">
+        <i class="bi bi-star-fill text-warning"></i> <span>Rider Reviews</span>
+      </a>
+      <a href="admin-reports.html" class="sidebar-link ">
+        <i class="bi bi-graph-up-arrow"></i> <span>Analytics Reports</span>
+      </a>
+      <a href="admin-settings.html" class="sidebar-link ">
+        <i class="bi bi-gear-fill"></i> <span>System Settings</span>
+      </a>
+
+      <div class="sidebar-heading mt-3">Portals</div>
+      <a href="customer-dashboard.html" class="sidebar-link">
+        <i class="bi bi-person-badge"></i> <span>Customer View</span>
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <i class="bi bi-house-door"></i> <span>Public Website</span>
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/team/member-1.svg" class="rounded-circle" width="38" height="38" alt="Admin">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-truncate">Administrator</div>
+          <div class="text-muted" style="font-size:0.725rem;">Super Admin</div>
+        </div>
+        <a href="login.html" class="ms-auto text-danger" title="Logout"><i class="bi bi-box-arrow-right fs-5"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-main">
+    
+  <header class="dashboard-topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-sm btn-icon btn-outline-secondary dashboard-sidebar-toggle d-lg-none">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <h5 class="fw-bold mb-0">Scooter Fleet Management</h5>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-outline-primary rtl-toggle-btn fw-bold" title="Toggle LTR/RTL Layout" aria-label="Toggle Direction">RTL</button>
+      <div class="dropdown">
+        <button class="btn btn-icon btn-outline-secondary position-relative" type="button" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" style="width: 280px;">
+          <li class="dropdown-header fw-bold">System Alerts</li>
+          <li><a class="dropdown-item small" href="admin-bookings.html"><i class="bi bi-calendar-plus text-primary me-2"></i> New booking #BK-902184 received</a></li>
+          <li><a class="dropdown-item small" href="admin-scooters.html"><i class="bi bi-wrench text-warning me-2"></i> Scooter #ADV-160 scheduled maintenance</a></li>
+        </ul>
+      </div>
+      <a href="admin-scooters.html" class="btn btn-sm btn-primary d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Add Scooter</a>
+    </div>
+  </header>
+
+    <main class="dashboard-content">
+      <div class="card border rounded-4 p-4 bg-white shadow-sm">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-4">
+          <div class="input-group" style="max-width: 320px;">
+            <input type="text" class="form-control" placeholder="Search scooter model, plate...">
+            <button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
+          </div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addScooterModal">
+            <i class="bi bi-plus-lg me-1"></i> Add New Scooter
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-custom table-hover">
+            <thead>
+              <tr>
+                <th>Scooter</th>
+                <th>Category</th>
+                <th>Plate Number</th>
+                <th>Station</th>
+                <th>Daily Rate</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/vispa.jpg" width="50" alt="Vespa">
+                    <div><strong>Vespa Primavera 150</strong><div class="text-muted small">Gasoline &bull; 155cc</div></div>
+                  </div>
+                </td>
+                <td>City Scooters</td>
+                <td><span class="badge bg-dark">VP-150-NY</span></td>
+                <td>Downtown Hub</td>
+                <td class="fw-bold">₹35.00</td>
+                <td><span class="badge bg-success-soft">Available</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-secondary" onclick="RentORideToast.show('Edit Scooter', 'Opening edit parameters...', 'info')"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-outline-danger" onclick="RentORideToast.show('Status Changed', 'Scooter moved to maintenance queue.', 'warning')"><i class="bi bi-wrench"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/niqi.jpg" width="50" alt="Niu EV">
+                    <div><strong>Niu NQi GT Pro</strong><div class="text-muted small">100% Electric EV</div></div>
+                  </div>
+                </td>
+                <td>Electric Scooters</td>
+                <td><span class="badge bg-dark">EV-849-MG</span></td>
+                <td>Downtown Hub</td>
+                <td class="fw-bold">₹42.00</td>
+                <td><span class="badge bg-primary-soft">Rented Out</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-secondary" onclick="RentORideToast.show('Edit Scooter', 'Opening edit parameters...', 'info')"><i class="bi bi-pencil"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="assets/images/honda pcx 160.jpg" width="50" alt="PCX">
+                    <div><strong>Honda PCX 160</strong><div class="text-muted small">Gasoline &bull; 160cc</div></div>
+                  </div>
+                </td>
+                <td>Premium Maxi</td>
+                <td><span class="badge bg-dark">PC-160-CA</span></td>
+                <td>Airport Express</td>
+                <td class="fw-bold">₹48.00</td>
+                <td><span class="badge bg-success-soft">Available</span></td>
+                <td>
+                  <button class="btn btn-sm btn-outline-secondary" onclick="RentORideToast.show('Edit Scooter', 'Opening edit parameters...', 'info')"><i class="bi bi-pencil"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Add Scooter Modal -->
+<div class="modal fade" id="addScooterModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0 shadow">
+      <div class="modal-header border-bottom">
+        <h5 class="modal-title fw-bold">Add Scooter to Fleet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form class="needs-validation" novalidate data-success-msg="New vehicle added to live fleet!">
+        <div class="modal-body p-4">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-muted">Model Name</label>
+              <input type="text" class="form-control" placeholder="e.g. Vespa Sprint 150" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-muted">Category</label>
+              <select class="form-select">
+                <option>City Scooters</option>
+                <option>Electric Scooters</option>
+                <option>Premium Scooters</option>
+                <option>Adventure Scooters</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-muted">License Plate</label>
+              <input type="text" class="form-control" placeholder="e.g. VP-920-CA" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-bold text-muted">Assigned Station</label>
+              <select class="form-select">
+                <option>Downtown Hub</option>
+                <option>Airport Express Hub</option>
+                <option>Beachfront Promenade</option>
+                <option>Tech City Hub</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-bold text-muted">Daily Rate ($)</label>
+              <input type="number" class="form-control" value="35" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-bold text-muted">Hourly Rate ($)</label>
+              <input type="number" class="form-control" value="8" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-bold text-muted">Required Deposit ($)</label>
+              <input type="number" class="form-control" value="150" required>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Scooter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chartjs/chart.umd.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

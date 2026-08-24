@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Rent o Ride - RTL Stylesheet
+   Supports Arabic, Hebrew, and right-to-left layout configurations
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown-item:hover {
+  transform: translateX(-3px);
+}
+
+[dir="rtl"] .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+[dir="rtl"] .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+[dir="rtl"] .theme-floating-switcher {
+  right: auto;
+  left: 24px;
+}
+
+[dir="rtl"] .scooter-badge-top {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="rtl"] .wishlist-btn {
+  right: auto;
+  left: 1rem;
+}
+
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+  float: right;
+  padding-right: 0;
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+}
+
+[dir="rtl"] .me-1 { margin-left: 0.25rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-2 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+[dir="rtl"] .ms-1 { margin-right: 0.25rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+
+[dir="rtl"] .input-group .password-toggle-btn {
+  border-start-end-radius: 0 !important;
+  border-end-end-radius: 0 !important;
+  border-start-start-radius: var(--radius-md) !important;
+  border-end-start-radius: var(--radius-md) !important;
+  border-left: 1px solid var(--border-color);
+  border-right: none;
+}
+
+[dir="rtl"] .input-group .form-control {
+  border-start-start-radius: 0 !important;
+  border-end-start-radius: 0 !important;
+  border-start-end-radius: var(--radius-md) !important;
+  border-end-end-radius: var(--radius-md) !important;
+}

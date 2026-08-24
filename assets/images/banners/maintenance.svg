@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="gradMaint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="20" fill="#071A2F"/>
+  <circle cx="300" cy="200" r="120" fill="url(#gradMaint)" opacity="0.15"/>
+  <!-- Gear -->
+  <circle cx="300" cy="190" r="60" stroke="#F59E0B" stroke-width="12" stroke-dasharray="16, 12" fill="none"/>
+  <circle cx="300" cy="190" r="30" fill="#0F2D52" stroke="#F59E0B" stroke-width="6"/>
+  <!-- Wrench -->
+  <path d="M250 250 L350 130" stroke="#0EA5E9" stroke-width="14" stroke-linecap="round"/>
+</svg>

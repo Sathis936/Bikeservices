@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%">
+    <defs>
+      <linearGradient id="grad_PiaggioLiberty125" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F59E0B"/>
+        <stop offset="100%" stop-color="#B45309"/>
+      </linearGradient>
+      <radialGradient id="shadow_grad_PiaggioLiberty125" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="rgba(0,0,0,0.2)"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+      </radialGradient>
+      <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#94A3B8"/>
+        <stop offset="50%" stop-color="#E2E8F0"/>
+        <stop offset="100%" stop-color="#64748B"/>
+      </linearGradient>
+    </defs>
+    <!-- Background Card Frame -->
+    <rect width="600" height="420" rx="24" fill="#F8FAFC" opacity="0.7"/>
+    <circle cx="300" cy="210" r="160" fill="#F59E0B" opacity="0.06"/>
+    <ellipse cx="300" cy="350" rx="220" ry="20" fill="url(#shadow_grad_PiaggioLiberty125)"/>
+
+    <!-- Scooter Illustration -->
+    <g transform="translate(50, 40)">
+      <!-- Rear Wheel -->
+      <circle cx="110" cy="260" r="55" fill="#1E293B"/>
+      <circle cx="110" cy="260" r="42" fill="#334155"/>
+      <circle cx="110" cy="260" r="28" fill="url(#metal)"/>
+      <circle cx="110" cy="260" r="10" fill="#0F172A"/>
+      <!-- Front Wheel -->
+      <circle cx="390" cy="260" r="55" fill="#1E293B"/>
+      <circle cx="390" cy="260" r="42" fill="#334155"/>
+      <circle cx="390" cy="260" r="28" fill="url(#metal)"/>
+      <circle cx="390" cy="260" r="10" fill="#0F172A"/>
+
+      <!-- Engine/Battery -->
+      <path d="M100 260 L200 245 L230 250" stroke="#475569" stroke-width="16" stroke-linecap="round" fill="none"/>
+         <rect x="80" y="248" width="85" height="20" rx="6" fill="url(#metal)"/>
+
+      <!-- Main Frame -->
+      <path d="M110 260 C130 190 180 180 230 180 L290 180 L350 200 L390 260" fill="none" stroke="#334155" stroke-width="12" stroke-linejoin="round"/>
+      
+      <!-- Body Panels -->
+      <path d="M100 220 C130 140 220 135 270 170 C240 220 180 240 100 220 Z" fill="url(#grad_PiaggioLiberty125)"/>
+      <path d="M250 170 L340 170 C360 170 380 190 385 220 L320 235 L260 210 Z" fill="url(#grad_PiaggioLiberty125)"/>
+      
+      <!-- Steering Column -->
+      <path d="M310 180 L355 75 L380 75 L390 190 L345 225 Z" fill="url(#grad_PiaggioLiberty125)"/>
+      <path d="M340 85 L390 260" stroke="#64748B" stroke-width="10" stroke-linecap="round"/>
+
+      <!-- Handlebars & Mirrors -->
+      <path d="M330 65 L375 75 L385 68" stroke="#1E293B" stroke-width="8" stroke-linecap="round" fill="none"/>
+      <circle cx="325" cy="45" r="12" fill="none" stroke="#475569" stroke-width="3"/>
+      <path d="M325 57 L335 70" stroke="#475569" stroke-width="3"/>
+
+      <!-- Headlight -->
+      <polygon points="375,80 395,90 385,110 365,100" fill="#38BDF8" opacity="0.9"/>
+      <polygon points="380,85 435,70 435,120 375,105" fill="#38BDF8" opacity="0.18"/>
+
+      <!-- Seat -->
+      <path d="M140 155 C180 140 240 140 285 160 C260 180 170 180 140 155 Z" fill="#1E293B"/>
+      <path d="M145 155 C180 145 235 145 280 162" stroke="#D97706" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
+
+      <!-- Floorboard -->
+      <rect x="230" y="215" width="75" height="12" rx="4" fill="#1E293B"/>
+
+      <!-- Badge -->
+      <rect x="20" y="20" width="140" height="32" rx="16" fill="#0F172A" opacity="0.9"/>
+      <circle cx="36" cy="36" r="6" fill="#0EA5E9"/>
+      <text x="50" y="40" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Urban City</text>
+    </g>
+  </svg>

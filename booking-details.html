@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Details #BK-829104 | Rent o Ride Customer Portal</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+  
+  <div class="sidebar-backdrop"></div>
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-brand d-flex justify-content-between align-items-center">
+      <a href="index.html"><img src="assets/images/logo.svg" alt="Rent o Ride" class="brand-logo-img" height="34"></a>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="sidebar-heading">Rider Account</div>
+      <a href="customer-dashboard.html" class="sidebar-link ">
+        <i class="bi bi-grid-1x2-fill"></i> <span>Overview</span>
+      </a>
+      <a href="active-rental.html" class="sidebar-link ">
+        <i class="bi bi-lightning-charge-fill text-warning"></i> <span>Live Active Ride</span>
+        <span class="badge bg-success-soft ms-auto small">LIVE</span>
+      </a>
+      <a href="my-bookings.html" class="sidebar-link active">
+        <i class="bi bi-calendar2-check-fill"></i> <span>My Bookings</span>
+      </a>
+      <a href="rental-history.html" class="sidebar-link ">
+        <i class="bi bi-clock-history"></i> <span>Rental History</span>
+      </a>
+      <a href="wishlist.html" class="sidebar-link ">
+        <i class="bi bi-heart-fill text-danger"></i> <span>Saved Wishlist</span>
+      </a>
+
+      <div class="sidebar-heading mt-3">Preferences</div>
+      <a href="profile.html" class="sidebar-link ">
+        <i class="bi bi-person-badge-fill"></i> <span>Profile &amp; License</span>
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <i class="bi bi-arrow-left-circle"></i> <span>Back to Website</span>
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-3">
+        <img src="assets/images/testimonials/avatar-1.svg" class="rounded-circle" width="40" height="40" alt="Alex Vance">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-truncate">Alex Vance</div>
+          <div class="text-muted" style="font-size: 0.725rem;">Verified Rider</div>
+        </div>
+        <a href="login.html" class="ms-auto text-danger" title="Logout"><i class="bi bi-box-arrow-right fs-5"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-main">
+    
+  <header class="dashboard-topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-sm btn-icon btn-outline-secondary dashboard-sidebar-toggle d-lg-none">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <h5 class="fw-bold mb-0">Booking Details #BK-829104</h5>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-outline-primary rtl-toggle-btn fw-bold" title="Toggle LTR/RTL Layout" aria-label="Toggle Direction">RTL</button>
+      <div class="dropdown">
+        <button class="btn btn-icon btn-outline-secondary position-relative" type="button" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" style="width: 280px;">
+          <li class="dropdown-header fw-bold">Notifications</li>
+          <li><a class="dropdown-item small" href="active-rental.html"><i class="bi bi-battery-charging text-success me-2"></i> Battery level at 85% on active ride</a></li>
+          <li><a class="dropdown-item small" href="my-bookings.html"><i class="bi bi-check-circle text-primary me-2"></i> Reservation #BK-482910 Confirmed</a></li>
+        </ul>
+      </div>
+      <a href="fleet.html" class="btn btn-sm btn-primary d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Rent Scooter</a>
+    </div>
+  </header>
+
+    <main class="dashboard-content">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card border rounded-4 p-4 bg-white shadow-sm mb-4">
+            <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+              <div>
+                <span class="badge bg-success-soft mb-1">Confirmed &amp; Active</span>
+                <h4 class="fw-bold mb-0">Booking #BK-829104</h4>
+              </div>
+              <a href="rental-receipt.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-printer me-1"></i> Print Invoice</a>
+            </div>
+
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div class="p-3 border rounded-3 bg-light">
+                  <small class="text-muted d-block">Pick-up Station</small>
+                  <strong>Downtown Hub (Station 1)</strong>
+                  <div class="small text-muted">742 Evergreen Terrace &bull; Oct 12, 2026 (09:00 AM)</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 border rounded-3 bg-light">
+                  <small class="text-muted d-block">Return Station</small>
+                  <strong>Downtown Hub (Station 1)</strong>
+                  <div class="small text-muted">742 Evergreen Terrace &bull; Oct 14, 2026 (08:00 PM)</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 p-3 border rounded-3 mb-4">
+              <img src="assets/images/niqi.jpg" width="100" alt="Niu NQi">
+              <div>
+                <h5 class="fw-bold mb-1">Niu NQi GT Pro (Electric EV)</h5>
+                <p class="text-muted small mb-0">License Plate: <span class="badge bg-dark">EV-849-MG</span> &bull; Transmission: Automatic</p>
+              </div>
+            </div>
+
+            <h5 class="fw-bold mb-3">Payment Summary</h5>
+            <div class="table-responsive">
+              <table class="table table-borderless small mb-0">
+                <tbody>
+                  <tr><td>3 Days Base Rate (₹42/day)</td><td class="text-end fw-bold">₹126.00</td></tr>
+                  <tr><td>Comprehensive Damage Waiver</td><td class="text-end fw-bold">₹30.00</td></tr>
+                  <tr><td>Extra Helmet</td><td class="text-end fw-bold">₹15.00</td></tr>
+                  <tr><td>Promo Discount (WELCOME10)</td><td class="text-end text-success fw-bold">-₹17.10</td></tr>
+                  <tr class="border-top"><td class="fw-bold fs-6">Total Paid</td><td class="text-end fw-bold fs-6 text-primary">₹153.90</td></tr>
+                  <tr><td class="text-muted">Security Deposit Hold (Released on return)</td><td class="text-end text-muted">₹200.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- Check-in QR Code Card -->
+          <div class="card border rounded-4 p-4 bg-white shadow-sm text-center mb-4">
+            <h6 class="fw-bold mb-2">Station Check-in QR</h6>
+            <p class="text-muted small mb-3">Present this code to station personnel or scan at the smart dock</p>
+            <div class="p-3 bg-light rounded-3 d-inline-block mb-3 border">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="140" height="140">
+                <rect width="160" height="160" fill="#fff"/>
+                <g fill="#000">
+                  <rect x="10" y="10" width="40" height="40"/>
+                  <rect x="18" y="18" width="24" height="24" fill="#fff"/>
+                  <rect x="24" y="24" width="12" height="12"/>
+                  <rect x="110" y="10" width="40" height="40"/>
+                  <rect x="118" y="18" width="24" height="24" fill="#fff"/>
+                  <rect x="124" y="24" width="12" height="12"/>
+                  <rect x="10" y="110" width="40" height="40"/>
+                  <rect x="18" y="118" width="24" height="24" fill="#fff"/>
+                  <rect x="24" y="124" width="12" height="12"/>
+                  <rect x="60" y="20" width="10" height="30"/>
+                  <rect x="80" y="10" width="20" height="10"/>
+                  <rect x="60" y="60" width="40" height="40"/>
+                  <rect x="110" y="60" width="20" height="20"/>
+                  <rect x="130" y="90" width="20" height="20"/>
+                  <rect x="60" y="110" width="30" height="20"/>
+                  <rect x="100" y="120" width="40" height="30"/>
+                </g>
+              </svg>
+            </div>
+            <div class="d-grid gap-2">
+              <a href="active-rental.html" class="btn btn-primary"><i class="bi bi-phone me-1"></i> Open Digital Key</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chartjs/chart.umd.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

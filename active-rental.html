@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Active Ride Dashboard | Rent o Ride Customer Portal</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+  
+  <div class="sidebar-backdrop"></div>
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-brand d-flex justify-content-between align-items-center">
+      <a href="index.html"><img src="assets/images/logo.svg" alt="Rent o Ride" class="brand-logo-img" height="34"></a>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="sidebar-heading">Rider Account</div>
+      <a href="customer-dashboard.html" class="sidebar-link ">
+        <i class="bi bi-grid-1x2-fill"></i> <span>Overview</span>
+      </a>
+      <a href="active-rental.html" class="sidebar-link active">
+        <i class="bi bi-lightning-charge-fill text-warning"></i> <span>Live Active Ride</span>
+        <span class="badge bg-success-soft ms-auto small">LIVE</span>
+      </a>
+      <a href="my-bookings.html" class="sidebar-link ">
+        <i class="bi bi-calendar2-check-fill"></i> <span>My Bookings</span>
+      </a>
+      <a href="rental-history.html" class="sidebar-link ">
+        <i class="bi bi-clock-history"></i> <span>Rental History</span>
+      </a>
+      <a href="wishlist.html" class="sidebar-link ">
+        <i class="bi bi-heart-fill text-danger"></i> <span>Saved Wishlist</span>
+      </a>
+
+      <div class="sidebar-heading mt-3">Preferences</div>
+      <a href="profile.html" class="sidebar-link ">
+        <i class="bi bi-person-badge-fill"></i> <span>Profile &amp; License</span>
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <i class="bi bi-arrow-left-circle"></i> <span>Back to Website</span>
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-3">
+        <img src="assets/images/testimonials/avatar-1.svg" class="rounded-circle" width="40" height="40" alt="Alex Vance">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-truncate">Alex Vance</div>
+          <div class="text-muted" style="font-size: 0.725rem;">Verified Rider</div>
+        </div>
+        <a href="login.html" class="ms-auto text-danger" title="Logout"><i class="bi bi-box-arrow-right fs-5"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-main">
+    
+  <header class="dashboard-topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-sm btn-icon btn-outline-secondary dashboard-sidebar-toggle d-lg-none">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <h5 class="fw-bold mb-0">Live Active Rental</h5>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-outline-primary rtl-toggle-btn fw-bold" title="Toggle LTR/RTL Layout" aria-label="Toggle Direction">RTL</button>
+      <div class="dropdown">
+        <button class="btn btn-icon btn-outline-secondary position-relative" type="button" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" style="width: 280px;">
+          <li class="dropdown-header fw-bold">Notifications</li>
+          <li><a class="dropdown-item small" href="active-rental.html"><i class="bi bi-battery-charging text-success me-2"></i> Battery level at 85% on active ride</a></li>
+          <li><a class="dropdown-item small" href="my-bookings.html"><i class="bi bi-check-circle text-primary me-2"></i> Reservation #BK-482910 Confirmed</a></li>
+        </ul>
+      </div>
+      <a href="fleet.html" class="btn btn-sm btn-primary d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Rent Scooter</a>
+    </div>
+  </header>
+
+    <main class="dashboard-content">
+      <div class="row g-4">
+        <!-- Digital Key & Live Controls -->
+        <div class="col-lg-6">
+          <div class="card border rounded-4 p-4 bg-white shadow-sm h-100 text-center">
+            <span id="activeLockStatus" class="badge bg-success-soft align-self-center px-3 py-2 rounded-pill fw-bold mb-3">
+              Vehicle Unlocked &amp; Ready
+            </span>
+            <h4 class="fw-bold mb-1">Niu NQi GT Pro</h4>
+            <p class="text-muted small mb-4">Plate: EV-849-MG &bull; Booking #BK-829104</p>
+            
+            <div class="my-4">
+              <div class="d-inline-flex align-items-center justify-content-center p-4 rounded-circle bg-light border border-2 mb-3" style="width:120px; height:120px;">
+                <i id="activeLockIcon" class="bi bi-unlock-fill text-success fs-1"></i>
+              </div>
+              <div class="fw-bold fs-5">Digital Key Status</div>
+              <p class="text-muted small">Tap button below to toggle engine immobilizer</p>
+            </div>
+
+            <div class="d-grid gap-2 max-w-400 mx-auto">
+              <button id="toggleDigitalLockBtn" type="button" class="btn btn-danger btn-lg">Lock Vehicle</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#extendRideModal">
+                <i class="bi bi-clock-history me-1"></i> Extend Rental Time
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telemetry & Live Battery / Range -->
+        <div class="col-lg-6">
+          <div class="card border rounded-4 p-4 bg-white shadow-sm mb-4">
+            <h5 class="fw-bold mb-3">Vehicle Telemetry</h5>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="p-3 bg-light rounded-3">
+                  <small class="text-muted">Battery Charge</small>
+                  <div class="display-6 fw-bold text-success font-heading">85%</div>
+                  <small class="text-muted">Dual Lithium Pack</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 bg-light rounded-3">
+                  <small class="text-muted">Estimated Range</small>
+                  <div class="display-6 fw-bold text-primary font-heading">76 km</div>
+                  <small class="text-muted">Based on driving style</small>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 bg-light rounded-3">
+                  <small class="text-muted">Total Distance Logged</small>
+                  <div class="h4 fw-bold text-dark mb-0">34.2 km</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 bg-light rounded-3">
+                  <small class="text-muted">Return Station</small>
+                  <div class="h4 fw-bold text-dark mb-0">Downtown Hub</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border rounded-4 p-4 bg-white shadow-sm">
+            <h5 class="fw-bold mb-3">Live Emergency Assistance</h5>
+            <p class="text-muted small">Need immediate assistance or flat tyre puncture dispatch?</p>
+            <div class="d-flex gap-2">
+              <a href="tel:18005556686" class="btn btn-outline-danger w-100"><i class="bi bi-telephone-fill me-1"></i> Call Roadside Dispatch</a>
+              <a href="contact.html" class="btn btn-outline-primary w-100"><i class="bi bi-chat-dots-fill me-1"></i> Live Chat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Extend Ride Modal -->
+<div class="modal fade" id="extendRideModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0 shadow">
+      <div class="modal-header border-bottom">
+        <h5 class="modal-title fw-bold">Extend Your Rental</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <label class="form-label small fw-bold text-muted">Select Additional Days</label>
+        <select class="form-select mb-3">
+          <option>+ 1 Additional Day (+₹42)</option>
+          <option>+ 2 Additional Days (+₹84)</option>
+          <option>+ 3 Additional Days (+₹120 - 5% discount)</option>
+        </select>
+        <p class="text-muted small mb-0">Your card on file will be charged automatically upon confirmation.</p>
+      </div>
+      <div class="modal-footer border-top">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="RentORideToast.show('Rental Extended', 'Your return date has been updated to +1 day.', 'success')">Confirm Extension</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chartjs/chart.umd.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

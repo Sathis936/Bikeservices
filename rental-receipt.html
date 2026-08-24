@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Receipt & Tax Invoice | Rent o Ride Customer Portal</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-wrapper">
+  
+  <div class="sidebar-backdrop"></div>
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-brand d-flex justify-content-between align-items-center">
+      <a href="index.html"><img src="assets/images/logo.svg" alt="Rent o Ride" class="brand-logo-img" height="34"></a>
+    </div>
+
+    <div class="sidebar-menu">
+      <div class="sidebar-heading">Rider Account</div>
+      <a href="customer-dashboard.html" class="sidebar-link ">
+        <i class="bi bi-grid-1x2-fill"></i> <span>Overview</span>
+      </a>
+      <a href="active-rental.html" class="sidebar-link ">
+        <i class="bi bi-lightning-charge-fill text-warning"></i> <span>Live Active Ride</span>
+        <span class="badge bg-success-soft ms-auto small">LIVE</span>
+      </a>
+      <a href="my-bookings.html" class="sidebar-link active">
+        <i class="bi bi-calendar2-check-fill"></i> <span>My Bookings</span>
+      </a>
+      <a href="rental-history.html" class="sidebar-link ">
+        <i class="bi bi-clock-history"></i> <span>Rental History</span>
+      </a>
+      <a href="wishlist.html" class="sidebar-link ">
+        <i class="bi bi-heart-fill text-danger"></i> <span>Saved Wishlist</span>
+      </a>
+
+      <div class="sidebar-heading mt-3">Preferences</div>
+      <a href="profile.html" class="sidebar-link ">
+        <i class="bi bi-person-badge-fill"></i> <span>Profile &amp; License</span>
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <i class="bi bi-arrow-left-circle"></i> <span>Back to Website</span>
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-3">
+        <img src="assets/images/testimonials/avatar-1.svg" class="rounded-circle" width="40" height="40" alt="Alex Vance">
+        <div class="overflow-hidden">
+          <div class="fw-bold small text-truncate">Alex Vance</div>
+          <div class="text-muted" style="font-size: 0.725rem;">Verified Rider</div>
+        </div>
+        <a href="login.html" class="ms-auto text-danger" title="Logout"><i class="bi bi-box-arrow-right fs-5"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-main">
+    
+  <header class="dashboard-topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-sm btn-icon btn-outline-secondary dashboard-sidebar-toggle d-lg-none">
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <h5 class="fw-bold mb-0">Official Rental Receipt</h5>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-outline-primary rtl-toggle-btn fw-bold" title="Toggle LTR/RTL Layout" aria-label="Toggle Direction">RTL</button>
+      <div class="dropdown">
+        <button class="btn btn-icon btn-outline-secondary position-relative" type="button" data-bs-toggle="dropdown">
+          <i class="bi bi-bell"></i>
+          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" style="width: 280px;">
+          <li class="dropdown-header fw-bold">Notifications</li>
+          <li><a class="dropdown-item small" href="active-rental.html"><i class="bi bi-battery-charging text-success me-2"></i> Battery level at 85% on active ride</a></li>
+          <li><a class="dropdown-item small" href="my-bookings.html"><i class="bi bi-check-circle text-primary me-2"></i> Reservation #BK-482910 Confirmed</a></li>
+        </ul>
+      </div>
+      <a href="fleet.html" class="btn btn-sm btn-primary d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Rent Scooter</a>
+    </div>
+  </header>
+
+    <main class="dashboard-content">
+      <div class="max-w-800 mx-auto">
+        <div class="d-flex justify-content-end gap-2 mb-3 no-print">
+          <button type="button" class="btn btn-primary" onclick="window.print()"><i class="bi bi-printer-fill me-1"></i> Print Receipt</button>
+          <a href="my-bookings.html" class="btn btn-outline-secondary">Back</a>
+        </div>
+
+        <div class="card border rounded-4 p-4 p-md-5 bg-white shadow-sm receipt-card">
+          <!-- Invoice Header -->
+          <div class="d-flex justify-content-between align-items-start border-bottom pb-4 mb-4">
+            <div>
+              <img src="assets/images/logo.svg" alt="Rent o Ride" height="40" class="mb-2">
+              <p class="text-muted small mb-0">Rent o Ride Technologies Inc.<br>742 Evergreen Terrace, Downtown Station<br>Tax ID: US-928374-MG</p>
+            </div>
+            <div class="text-end">
+              <h4 class="fw-bold text-primary mb-1">TAX INVOICE</h4>
+              <div class="small text-muted">Receipt #: <strong>REC-829104</strong></div>
+              <div class="small text-muted">Date: <strong>Oct 12, 2026</strong></div>
+              <div class="badge bg-success-soft mt-1">PAID IN FULL</div>
+            </div>
+          </div>
+
+          <!-- Billed To -->
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <h6 class="fw-bold text-muted text-uppercase small">Billed To:</h6>
+              <div class="fw-bold">Alex Vance</div>
+              <div class="text-muted small">alex.vance@example.com<br>+1 (555) 019-2834</div>
+            </div>
+            <div class="col-6 text-end">
+              <h6 class="fw-bold text-muted text-uppercase small">Rental Vehicle:</h6>
+              <div class="fw-bold">Niu NQi GT Pro (Electric EV)</div>
+              <div class="text-muted small">Plate: EV-849-MG &bull; 3 Days</div>
+            </div>
+          </div>
+
+          <!-- Line Items -->
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered">
+              <thead class="table-light">
+                <tr>
+                  <th>Description</th>
+                  <th class="text-center">Rate</th>
+                  <th class="text-center">Qty / Days</th>
+                  <th class="text-end">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Electric Scooter Rental (Niu NQi GT Pro)</td>
+                  <td class="text-center">₹42.00</td>
+                  <td class="text-center">3 Days</td>
+                  <td class="text-end">₹126.00</td>
+                </tr>
+                <tr>
+                  <td>Comprehensive Damage Waiver (₹10/day)</td>
+                  <td class="text-center">₹10.00</td>
+                  <td class="text-center">3 Days</td>
+                  <td class="text-end">₹30.00</td>
+                </tr>
+                <tr>
+                  <td>Extra Passenger Helmet Kit</td>
+                  <td class="text-center">₹5.00</td>
+                  <td class="text-center">3 Days</td>
+                  <td class="text-end">₹15.00</td>
+                </tr>
+                <tr>
+                  <td class="text-success">Promo Discount (WELCOME10 - 10% Off)</td>
+                  <td class="text-center text-success">-10%</td>
+                  <td class="text-center text-success">1</td>
+                  <td class="text-end text-success">-₹17.10</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="3" class="text-end">Subtotal:</th>
+                  <th class="text-end">₹153.90</th>
+                </tr>
+                <tr>
+                  <th colspan="3" class="text-end">Sales Tax (8%):</th>
+                  <th class="text-end">₹12.31</th>
+                </tr>
+                <tr class="table-light">
+                  <th colspan="3" class="text-end fs-5">Total Paid (INR):</th>
+                  <th class="text-end fs-5 text-primary">₹166.21</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div class="p-3 bg-light rounded-3 small text-muted">
+            <strong>Payment Method:</strong> Visa ending in •••• 4242 &bull; Auth Code: 839201<br>
+            <strong>Security Deposit:</strong> ₹200.00 pre-authorization hold released upon check-in.
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chartjs/chart.umd.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

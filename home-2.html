@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Urban E-Scooter Rental | Rent o Ride - Scooter & Moped Rental Service</title>
+  <meta name="description" content="Smart Scooter Rental for Modern Urban Mobility. 100% Electric, app-connected, seamless dockless unlock.">
+  <meta name="keywords" content="scooter rental, moped hire, electric scooter, urban mobility, bike rental, vespa rental">
+  <meta name="author" content="Rent o Ride">
+  <meta property="og:title" content="Smart Urban E-Scooter Rental | Rent o Ride">
+  <meta property="og:description" content="Smart Scooter Rental for Modern Urban Mobility. 100% Electric, app-connected, seamless dockless unlock.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/banners/urban-mobility.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+
+
+  <!-- Main Navigation -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-xl py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/images/logo.svg" alt="Rent o Ride Logo" class="brand-logo-img" height="38">
+        </a>
+        
+        <div class="d-flex align-items-center gap-2 navbar-actions d-xl-none">
+          <button type="button" class="btn btn-sm btn-icon btn-outline-primary theme-toggle-btn" aria-label="Toggle Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-icon btn-outline-primary rtl-toggle-btn fw-bold" title="Toggle LTR/RTL Layout" aria-label="Toggle Direction">RTL</button>
+          <a href="wishlist.html" class="btn btn-sm btn-icon btn-wishlist position-relative">
+            <i class="bi bi-heart"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger wishlist-count-badge">2</span>
+          </a>
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+            <i class="bi bi-list fs-1 text-primary"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse d-none d-xl-block" id="navbarMain">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="index.html"><i class="bi bi-house-door me-2"></i>Home 1 - Rental Hub</a></li>
+                <li><a class="dropdown-item active" href="home-2.html"><i class="bi bi-lightning-charge me-2"></i>Home 2 - Smart E-Mobility</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link " href="fleet.html">Fleet</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="services.html"><i class="bi bi-grid me-2"></i>All Services</a></li>
+                <li><a class="dropdown-item" href="service-details.html"><i class="bi bi-file-earmark-text me-2"></i>Service Details</a></li>
+                <li><a class="dropdown-item" href="safety-deposit.html"><i class="bi bi-shield-check me-2"></i>Safety & Deposit Info</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link " href="pricing.html">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link " href="coverage-area.html">Coverage</a></li>
+            <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link " href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 navbar-actions">
+            <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <button type="button" class="btn btn-icon btn-outline-primary rtl-toggle-btn fw-bold" title="Toggle LTR/RTL Layout" aria-label="Toggle Direction">RTL</button>
+            <a href="wishlist.html" class="btn btn-icon btn-wishlist position-relative" title="Saved Scooters">
+              <i class="bi bi-heart"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger wishlist-count-badge">2</span>
+            </a>
+            <div class="dropdown">
+              <button type="button" class="btn btn-icon btn-outline-primary" data-bs-toggle="dropdown" aria-expanded="false" title="My Account">
+                <i class="bi bi-person-circle"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end account-menu">
+                <li><h6 class="dropdown-header fw-bold small text-uppercase">My Account</h6></li>
+                <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i> Login</a></li>
+                <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i> Sign Up</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <a href="index.html"><img src="assets/images/logo.svg" alt="Rent o Ride Logo" class="brand-logo-img" height="34"></a>
+      <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4">
+      <div class="mb-4">
+        <h6 class="text-uppercase text-muted fw-bold small mb-2">Main Menu</h6>
+        <ul class="nav flex-column gap-1">
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="index.html"><i class="bi bi-house-door me-2"></i> Home 1 (Rental Hub)</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="home-2.html"><i class="bi bi-lightning-charge me-2"></i> Home 2 (Urban EV)</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="fleet.html"><i class="bi bi-bicycle me-2"></i> Browse Fleet</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="services.html"><i class="bi bi-gear me-2"></i> Rental Services</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="pricing.html"><i class="bi bi-tags me-2"></i> Pricing Plans</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="coverage-area.html"><i class="bi bi-map me-2"></i> Coverage & Stations</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="safety-deposit.html"><i class="bi bi-shield-check me-2"></i> Safety & Deposit</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="about.html"><i class="bi bi-info-circle me-2"></i> About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="blog.html"><i class="bi bi-journal-text me-2"></i> News & Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="contact.html"><i class="bi bi-envelope me-2"></i> Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h6 class="text-uppercase text-muted fw-bold small mb-2">Dashboards & Portals</h6>
+        <div class="d-grid gap-2">
+          <a href="customer-dashboard.html" class="btn btn-outline-primary text-start"><i class="bi bi-speedometer2 me-2"></i> Customer Dashboard</a>
+          <a href="admin-dashboard.html" class="btn btn-outline-dark text-start"><i class="bi bi-shield-lock me-2"></i> Admin Dashboard</a>
+        </div>
+      </div>
+
+      <div class="pt-3 border-top d-grid gap-2">
+        <a href="login.html" class="btn btn-outline-primary"><i class="bi bi-box-arrow-in-right me-1"></i> Sign In</a>
+        <a href="register.html" class="btn btn-primary"><i class="bi bi-person-plus me-1"></i> Create Account</a>
+      </div>
+    </div>
+  </div>
+
+
+<main>
+  <!-- Modern Hero Section -->
+  <section class="hero-section hero-parallax-dark bg-dark text-white position-relative">
+    <div class="hero-parallax-layer" aria-hidden="true"></div>
+    <div class="container py-4">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7">
+          <span class="badge bg-secondary-soft text-secondary px-3 py-2 rounded-pill fw-bold mb-3">
+            <i class="bi bi-plug-fill me-1"></i> 100% Zero Emission Urban Mobility
+          </span>
+          <h1 class="hero-title text-white">Smart Scooter Rental for Modern Urban Mobility</h1>
+          <p class="hero-lead text-white-50">
+            Unlock next-generation electric scooters with your phone. Bypass city gridlock, save on parking, and travel clean with high-range dual battery mopeds.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="fleet.html" class="btn btn-secondary-accent btn-lg"><i class="bi bi-qr-code-scan me-1"></i> Scan & Unlock Ride</a>
+            <a href="coverage-area.html" class="btn btn-outline-light btn-lg"><i class="bi bi-geo-alt me-1"></i> Find Nearby Stations</a>
+          </div>
+          <div class="d-flex gap-4 pt-2 text-white-50 small">
+            <div><i class="bi bi-lightning-charge-fill text-secondary me-1"></i> Swappable Batteries</div>
+            <div><i class="bi bi-shield-check text-secondary me-1"></i> GPS Tracked Fleet</div>
+            <div><i class="bi bi-phone-fill text-secondary me-1"></i> Keyless App Access</div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="assets/images/banners/app-mockup.svg" alt="App Mockup" class="img-fluid" style="max-height: 480px; filter: drop-shadow(0 20px 30px rgba(0,194,168,0.2));">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eco Stats Counter -->
+  <section class="section-padding bg-white border-bottom">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-lg-3 col-6">
+          <div class="display-5 fw-bold text-secondary font-heading">1.2M+</div>
+          <div class="text-muted fw-semibold">Zero-Emission Kilometers</div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="display-5 fw-bold text-primary font-heading">320 Tons</div>
+          <div class="text-muted fw-semibold">CO2 Offset This Year</div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="display-5 fw-bold text-secondary font-heading">&lt; 30 Sec</div>
+          <div class="text-muted fw-semibold">Average App Unlock Time</div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="display-5 fw-bold text-primary font-heading">140 km</div>
+          <div class="text-muted fw-semibold">Max Range Per Charge</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Booking Flow & Benefits -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <img src="assets/images/banners/urban-mobility.svg" alt="Urban Mobility" class="img-fluid rounded-4 shadow-lg">
+        </div>
+        <div class="col-lg-6">
+          <span class="section-subtitle">App & Mobile Experience</span>
+          <h2 class="display-6 fw-bold mb-4">Rent in Seconds. Return Anywhere.</h2>
+          
+          <div class="d-flex gap-3 mb-4">
+            <div class="feature-icon-box bg-primary-soft text-primary flex-shrink-0"><i class="bi bi-phone"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1">1. Locate & Reserve Nearby</h5>
+              <p class="text-muted small">Open the interactive map to see available scooters, battery levels, and range estimates in real-time.</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3 mb-4">
+            <div class="feature-icon-box bg-secondary-soft text-secondary flex-shrink-0"><i class="bi bi-key-fill"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1">2. One-Tap Digital Key</h5>
+              <p class="text-muted small">Scan the QR code on the handlebar to ignite the motor without physical keys. Helmet trunk pops open automatically.</p>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <div class="feature-icon-box bg-success-soft text-success flex-shrink-0"><i class="bi bi-p-circle-fill"></i></div>
+            <div>
+              <h5 class="fw-bold mb-1">3. Park in Designated Hubs</h5>
+              <p class="text-muted small">End your trip at any partner charging hub to automatically close your rental receipt and trigger deposit release.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electric Fleet Highlight -->
+  <section class="section-padding bg-white border-top border-bottom">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="section-subtitle">Eco-Smart Lineup</span>
+        <h2 class="display-6 fw-bold">Next-Gen Electric Fleet</h2>
+      </div>
+
+      <div class="row g-4">
+        <!-- EV Model 1 -->
+        <div class="col-lg-4 col-md-6" data-scooter-id="scooter-2">
+          <div class="scooter-card">
+            <div class="scooter-img-wrap">
+              <span class="badge bg-success-soft scooter-badge-top">Smart EV</span>
+              <button type="button" class="wishlist-btn" title="Add to Wishlist" onclick="RentORideBooking.toggleWishlist('scooter-2')"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/niqi.jpg" alt="Niu NQi GT Pro">
+            </div>
+            <div class="scooter-card-body">
+              <h5 class="fw-bold mb-1">Niu NQi GT Pro</h5>
+              <p class="text-muted small">Dual Panasonic 35Ah Lithium-ion cells</p>
+              <div class="scooter-specs-grid">
+                <div class="spec-item"><i class="bi bi-speedometer2"></i> <span>80 km/h</span></div>
+                <div class="spec-item"><i class="bi bi-battery-charging"></i> <span>90 km</span></div>
+                <div class="spec-item"><i class="bi bi-clock"></i> <span>3.5h Fast Chg</span></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2">
+                <div class="scooter-price-wrap"><span class="price-amount">₹42</span><span class="price-unit">/ day</span></div>
+                <a href="scooter-details.html?id=scooter-2" class="btn btn-primary btn-sm">Rent This EV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EV Model 2 -->
+        <div class="col-lg-4 col-md-6" data-scooter-id="scooter-5">
+          <div class="scooter-card">
+            <div class="scooter-img-wrap">
+              <span class="badge bg-success-soft scooter-badge-top">High Speed EV</span>
+              <button type="button" class="wishlist-btn" title="Add to Wishlist" onclick="RentORideBooking.toggleWishlist('scooter-5')"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/Super Soco CPx.jpg" alt="Super Soco CPx">
+            </div>
+            <div class="scooter-card-body">
+              <h5 class="fw-bold mb-1">Super Soco CPx</h5>
+              <p class="text-muted small">4kW Bosch Hub Motor with CBS braking</p>
+              <div class="scooter-specs-grid">
+                <div class="spec-item"><i class="bi bi-speedometer2"></i> <span>90 km/h</span></div>
+                <div class="spec-item"><i class="bi bi-battery-charging"></i> <span>140 km</span></div>
+                <div class="spec-item"><i class="bi bi-clock"></i> <span>3.0h Fast Chg</span></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2">
+                <div class="scooter-price-wrap"><span class="price-amount">₹50</span><span class="price-unit">/ day</span></div>
+                <a href="scooter-details.html?id=scooter-5" class="btn btn-primary btn-sm">Rent This EV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EV Model 3 -->
+        <div class="col-lg-4 col-md-6" data-scooter-id="scooter-1">
+          <div class="scooter-card">
+            <div class="scooter-img-wrap">
+              <span class="badge bg-primary-soft scooter-badge-top">Classic Styling</span>
+              <button type="button" class="wishlist-btn" title="Add to Wishlist" onclick="RentORideBooking.toggleWishlist('scooter-1')"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/vispa.jpg" alt="Vespa Elettrica">
+            </div>
+            <div class="scooter-card-body">
+              <h5 class="fw-bold mb-1">Vespa Primavera 150</h5>
+              <p class="text-muted small">Iconic Italian design with i-Get Euro 5 engine</p>
+              <div class="scooter-specs-grid">
+                <div class="spec-item"><i class="bi bi-speedometer2"></i> <span>95 km/h</span></div>
+                <div class="spec-item"><i class="bi bi-fuel-pump"></i> <span>40 km/l</span></div>
+                <div class="spec-item"><i class="bi bi-person"></i> <span>2 Seats</span></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2">
+                <div class="scooter-price-wrap"><span class="price-amount">₹35</span><span class="price-unit">/ day</span></div>
+                <a href="scooter-details.html?id=scooter-1" class="btn btn-primary btn-sm">Rent This EV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section-padding">
+    <div class="container max-w-800">
+      <div class="text-center mb-5">
+        <span class="section-subtitle">Got Questions?</span>
+        <h2 class="display-6 fw-bold">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="accordion" id="faqAccordionHome2">
+        <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+          <h2 class="accordion-header" id="faqH1">
+            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqC1">
+              Do I need a special motorcycle license to ride electric scooters?
+            </button>
+          </h2>
+          <div id="faqC1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordionHome2">
+            <div class="accordion-body text-muted">
+              For scooters with a top speed under 45 km/h, a standard valid car driver's license is sufficient. For our high-speed highway-capable models (such as the PCX 160 or Super Soco CPx), a standard motorcycle endorsement is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+          <h2 class="accordion-header" id="faqH2">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqC2">
+              Where can I recharge the electric scooter battery?
+            </button>
+          </h2>
+          <div id="faqC2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionHome2">
+            <div class="accordion-body text-muted">
+              You can recharge at any of our 18 fast-charging swap stations for free, or plug the provided portable charging adapter into any standard 110V/220V wall socket at your home or hotel.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+          <h2 class="accordion-header" id="faqH3">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faqC3">
+              How does the security deposit hold work?
+            </button>
+          </h2>
+          <div id="faqC3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionHome2">
+            <div class="accordion-body text-muted">
+              A pre-authorization hold (₹120 to ₹250 depending on model) is placed on your credit/debit card at check-in. Once you return the vehicle in good condition, the hold is released immediately within 24 hours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo-white.svg" alt="Rent o Ride Logo" height="38">
+          </a>
+          <p class="text-white-50 pe-lg-4">
+            Premium scooter and moped rental service engineered for effortless urban exploration, daily commutes, and coastal adventures.
+          </p>
+          <div class="social-links mt-4">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading"><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-arrow-right me-2"></i> Home</a></li>
+            <li><a href="fleet.html"><i class="bi bi-arrow-right me-2"></i> Fleet</a></li>
+            <li><a href="services.html"><i class="bi bi-arrow-right me-2"></i> Services</a></li>
+            <li><a href="pricing.html"><i class="bi bi-arrow-right me-2"></i> Pricing</a></li>
+            <li><a href="coverage-area.html"><i class="bi bi-arrow-right me-2"></i> Coverage</a></li>
+            <li><a href="about.html"><i class="bi bi-arrow-right me-2"></i> About</a></li>
+            <li><a href="blog.html"><i class="bi bi-arrow-right me-2"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-arrow-right me-2"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h5 class="footer-heading"><i class="bi bi-gear me-2"></i>Rental Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html"><i class="bi bi-clock me-2"></i> Daily & Hourly Rental</a></li>
+            <li><a href="services.html"><i class="bi bi-calendar-month me-2"></i> Monthly Long-Term</a></li>
+            <li><a href="services.html"><i class="bi bi-lightning-charge me-2"></i> Electric Scooter Fleet</a></li>
+            <li><a href="services.html"><i class="bi bi-airplane me-2"></i> Airport Pickup & Drop</a></li>
+            <li><a href="safety-deposit.html"><i class="bi bi-shield-check me-2"></i> Safety & Deposit FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-heading"><i class="bi bi-chat-dots me-2"></i>Stay Connected</h5>
+          <p class="text-white-50 small mb-3">Subscribe to receive exclusive weekend discounts and new station alerts.</p>
+          <form class="needs-validation" novalidate data-success-msg="Thank you! You have subscribed to Rent o Ride updates.">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button class="btn btn-secondary-accent" type="submit"><i class="bi bi-send-fill"></i></button>
+            </div>
+          </form>
+          <div class="d-flex align-items-center gap-2 text-white-50 small">
+            <i class="bi bi-headset text-secondary fs-4"></i>
+            <div>
+              <div class="fw-bold text-white">24/7 Roadside Assistance</div>
+              <div>+1 (800) 555-MOTO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+        <div class="d-flex gap-3 small">
+          <a href="safety-deposit.html" class="text-white-50">Privacy Policy</a>
+          <a href="safety-deposit.html" class="text-white-50">Terms of Service</a>
+          <a href="safety-deposit.html" class="text-white-50">Security Deposit Rules</a>
+          <a href="admin-dashboard.html" class="text-white-50">Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Vendor Scripts -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/chartjs/chart.umd.min.js"></script>
+
+  <!-- Template Scripts -->
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/validation.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

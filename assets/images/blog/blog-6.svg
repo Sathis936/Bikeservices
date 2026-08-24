@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+    <defs>
+      <linearGradient id="bGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10B981"/>
+        <stop offset="100%" stop-color="#047857"/>
+      </linearGradient>
+    </defs>
+    <rect width="600" height="380" rx="16" fill="url(#bGrad6)"/>
+    <circle cx="480" cy="100" r="120" fill="#FFFFFF" opacity="0.08"/>
+    <circle cx="120" cy="300" r="100" fill="#FFFFFF" opacity="0.08"/>
+    <g transform="translate(60, 240)">
+      <circle cx="40" cy="40" r="30" fill="#FFFFFF" opacity="0.2"/>
+      <circle cx="160" cy="40" r="30" fill="#FFFFFF" opacity="0.2"/>
+      <path d="M40 40 L100 15 L160 40" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </g>
+    <rect x="40" y="40" width="130" height="30" rx="15" fill="#FFFFFF" opacity="0.25"/>
+    <text x="105" y="60" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">RIDE GUIDE</text>
+  </svg>

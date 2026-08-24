@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+    <circle cx="80" cy="80" r="76" fill="#0EA5E9" opacity="0.18"/>
+    <circle cx="80" cy="80" r="68" fill="#0EA5E9"/>
+    <text x="80" y="93" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="42" font-weight="bold" fill="#FFFFFF">SL</text>
+  </svg>

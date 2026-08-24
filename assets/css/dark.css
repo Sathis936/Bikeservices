@@ -1,0 +1,323 @@
+/* ==========================================================================
+   Rent o Ride - Dark Mode Stylesheet
+   Activated via [data-bs-theme="dark"] or body.dark-mode
+   ========================================================================== */
+
+[data-bs-theme="dark"],
+body.dark-mode {
+  --bg-light: #071A2F;
+  --bg-white: #0D2644;
+  --surface-card: #0D2644;
+  --surface-muted: #0F2D52;
+  --text-main: #E2E8F0;
+  --text-muted: #94A3B8;
+  --text-light: #64748B;
+  --border-color: #1E3E66;
+  --border-light: #163355;
+  --text-dark-main: #DDE5EE;
+  background-color: var(--bg-dark);
+  color: var(--text-dark-main);
+}
+
+[data-bs-theme="dark"] .site-header,
+body.dark-mode .site-header {
+  background-color: rgba(7, 26, 47, 0.94);
+  border-bottom-color: var(--border-dark);
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link,
+body.dark-mode .navbar-nav .nav-link {
+  color: #E2E8F0;
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link:hover,
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: var(--secondary);
+  background-color: rgba(var(--secondary-rgb), 0.14);
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link.active,
+body.dark-mode .navbar-nav .nav-link.active {
+  color: var(--secondary);
+  background-color: rgba(var(--secondary-rgb), 0.12);
+}
+
+[data-bs-theme="dark"] .dropdown-menu,
+body.dark-mode .dropdown-menu {
+  background-color: #0D2644;
+  border-color: #1E3E66;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+[data-bs-theme="dark"] .dropdown-item,
+body.dark-mode .dropdown-item {
+  color: #E2E8F0;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover,
+body.dark-mode .dropdown-item:hover {
+  background-color: #163B66;
+  color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] .hero-section,
+body.dark-mode .hero-section {
+  background: linear-gradient(135deg, #071A2F 0%, #0D2644 50%, #08283B 100%);
+}
+
+[data-bs-theme="dark"] .hero-title,
+[data-bs-theme="dark"] h1, [data-bs-theme="dark"] h2, 
+[data-bs-theme="dark"] h3, [data-bs-theme="dark"] h4, 
+[data-bs-theme="dark"] h5, [data-bs-theme="dark"] h6,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, 
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+  color: #EDF2F9;
+}
+
+[data-bs-theme="dark"] .booking-widget-card,
+[data-bs-theme="dark"] .scooter-card,
+[data-bs-theme="dark"] .feature-card,
+[data-bs-theme="dark"] .testimonial-card,
+[data-bs-theme="dark"] .stat-card,
+[data-bs-theme="dark"] .card,
+body.dark-mode .booking-widget-card,
+body.dark-mode .scooter-card,
+body.dark-mode .feature-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .stat-card,
+body.dark-mode .card {
+  background-color: var(--surface-dark);
+  border-color: var(--border-dark);
+}
+
+[data-bs-theme="dark"] .scooter-img-wrap,
+body.dark-mode .scooter-img-wrap {
+  background: linear-gradient(180deg, #091F38 0%, #0F2D52 100%);
+}
+
+[data-bs-theme="dark"] .booking-form-control,
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select,
+body.dark-mode .booking-form-control,
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #091F38;
+  border-color: #1E3E66;
+  color: #F8FAFC;
+}
+
+[data-bs-theme="dark"] .form-control:focus,
+[data-bs-theme="dark"] .form-select:focus,
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #0D2644;
+  border-color: var(--primary);
+  color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] .wishlist-btn,
+body.dark-mode .wishlist-btn {
+  background: rgba(13, 38, 68, 0.9);
+  border-color: var(--border-dark);
+  color: #94A3B8;
+}
+
+[data-bs-theme="dark"] .dashboard-sidebar,
+[data-bs-theme="dark"] .dashboard-topbar,
+body.dark-mode .dashboard-sidebar,
+body.dark-mode .dashboard-topbar {
+  background-color: #091F38;
+  border-color: var(--border-dark);
+}
+
+[data-bs-theme="dark"] .dashboard-wrapper,
+body.dark-mode .dashboard-wrapper {
+  background-color: #071A2F;
+}
+
+[data-bs-theme="dark"] .sidebar-link,
+body.dark-mode .sidebar-link {
+  color: #94A3B8;
+}
+
+[data-bs-theme="dark"] .sidebar-link:hover,
+body.dark-mode .sidebar-link:hover {
+  background-color: #112E52;
+  color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] .sidebar-link.active,
+body.dark-mode .sidebar-link.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] .table-custom th,
+body.dark-mode .table-custom th {
+  background-color: #091F38;
+  border-color: var(--border-dark);
+  color: #94A3B8;
+}
+
+[data-bs-theme="dark"] .table-custom td,
+body.dark-mode .table-custom td {
+  border-color: var(--border-dark);
+  color: #CBD5E1;
+}
+
+[data-bs-theme="dark"] .modal-content,
+body.dark-mode .modal-content {
+  background-color: #0D2644;
+  border-color: var(--border-dark);
+  color: #F8FAFC;
+}
+
+[data-bs-theme="dark"] .accordion-button,
+body.dark-mode .accordion-button {
+  background-color: #0D2644;
+  color: #F8FAFC;
+  border-color: var(--border-dark);
+}
+
+[data-bs-theme="dark"] .accordion-button:not(.collapsed),
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #112E52;
+  color: var(--secondary);
+}
+
+[data-bs-theme="dark"] .accordion-body,
+body.dark-mode .accordion-body {
+  background-color: #0D2644;
+  color: #94A3B8;
+}
+
+/* ==========================================================================
+   Dark Mode - Site-Wide Text & Surface Visibility Fixes (Mild Palette)
+   ========================================================================== */
+
+/* White surfaces flip to dark card surface */
+[data-bs-theme="dark"] .bg-white,
+body.dark-mode .bg-white {
+  background-color: var(--surface-dark) !important;
+}
+
+/* Light gray surfaces flip to muted dark surface */
+[data-bs-theme="dark"] .bg-light,
+body.dark-mode .bg-light {
+  background-color: #0F2D52 !important;
+}
+
+/* Hardcoded dark text becomes mild light slate */
+[data-bs-theme="dark"] .text-dark,
+body.dark-mode .text-dark {
+  color: #DDE5EE !important;
+}
+
+/* Outline dark buttons become light outline */
+[data-bs-theme="dark"] .btn-outline-dark,
+body.dark-mode .btn-outline-dark {
+  color: #DDE5EE;
+  border-color: #3A5578;
+}
+
+[data-bs-theme="dark"] .btn-outline-dark:hover,
+[data-bs-theme="dark"] .btn-outline-dark:focus,
+body.dark-mode .btn-outline-dark:hover,
+body.dark-mode .btn-outline-dark:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #56719A;
+  color: #FFFFFF;
+}
+
+/* Soft pastel badges become mild translucent tints with light accent text */
+[data-bs-theme="dark"] .bg-primary-soft,
+body.dark-mode .bg-primary-soft {
+  background-color: rgba(234, 88, 12, 0.18) !important;
+  color: #FDBA74 !important;
+}
+
+[data-bs-theme="dark"] .bg-success-soft,
+body.dark-mode .bg-success-soft {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  color: #6EE7B7 !important;
+}
+
+[data-bs-theme="dark"] .bg-warning-soft,
+body.dark-mode .bg-warning-soft {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  color: #FCD34D !important;
+}
+
+[data-bs-theme="dark"] .bg-danger-soft,
+body.dark-mode .bg-danger-soft {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  color: #FCA5A5 !important;
+}
+
+[data-bs-theme="dark"] .bg-info-soft,
+body.dark-mode .bg-info-soft {
+  background-color: rgba(14, 165, 233, 0.15) !important;
+  color: #7DD3FC !important;
+}
+
+/* Muted text stays comfortably readable, never harsh white */
+[data-bs-theme="dark"] .text-muted,
+body.dark-mode .text-muted {
+  color: #9DAEC4 !important;
+}
+
+/* ==========================================================================
+   Dark Mode - Footer
+   Distinct surface so the footer separates cleanly from the page background;
+   white / muted footer text keeps full visibility on it.
+   ========================================================================== */
+
+[data-bs-theme="dark"] .site-footer,
+body.dark-mode .site-footer {
+  background-color: #0D2644;
+  border-top: 1px solid #2A4A78;
+}
+
+[data-bs-theme="dark"] .footer-bottom,
+body.dark-mode .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-bs-theme="dark"] .dashboard-topbar .navbar-actions .btn-icon,
+body.dark-mode .dashboard-topbar .navbar-actions .btn-icon {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-dark-main);
+}
+
+[data-bs-theme="dark"] .dashboard-topbar .navbar-actions .btn-icon:hover,
+[data-bs-theme="dark"] .dashboard-topbar .navbar-actions .btn-icon:focus,
+body.dark-mode .dashboard-topbar .navbar-actions .btn-icon:hover,
+body.dark-mode .dashboard-topbar .navbar-actions .btn-icon:focus {
+  background-color: var(--secondary);
+  color: #06263F;
+}
+
+[data-bs-theme="dark"] .input-group .password-toggle-btn,
+body.dark-mode .input-group .password-toggle-btn {
+  background-color: #0B223C;
+  border-color: var(--border-dark);
+  color: #94A3B8;
+}
+
+[data-bs-theme="dark"] .input-group .password-toggle-btn:hover,
+[data-bs-theme="dark"] .input-group .password-toggle-btn:focus,
+body.dark-mode .input-group .password-toggle-btn:hover,
+body.dark-mode .input-group .password-toggle-btn:focus {
+  background-color: #163B66;
+  color: #FFFFFF;
+}
+
+[data-bs-theme="dark"] .auth-icon-wrap,
+body.dark-mode .auth-icon-wrap {
+  background-color: rgba(234, 88, 12, 0.18);
+}
+
+[data-bs-theme="dark"] .auth-section,
+body.dark-mode .auth-section {
+  background-color: var(--bg-dark);
+}
