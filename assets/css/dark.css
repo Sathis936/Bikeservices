@@ -321,3 +321,44 @@ body.dark-mode .auth-icon-wrap {
 body.dark-mode .auth-section {
   background-color: var(--bg-dark);
 }
+
+/* ==========================================================================
+   Dark Mode - Floating Hero Cards & Feature Media (Visibility Fix)
+   ========================================================================== */
+[data-bs-theme="dark"] .floating-stat-card,
+body.dark-mode .floating-stat-card {
+  background-color: rgba(13, 38, 68, 0.96) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55) !important;
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .floating-stat-card .fw-bold,
+body.dark-mode .floating-stat-card .fw-bold {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .floating-stat-card .text-muted,
+[data-bs-theme="dark"] .floating-stat-card .small,
+body.dark-mode .floating-stat-card .text-muted,
+body.dark-mode .floating-stat-card .small {
+  color: #CBD5E1 !important;
+}
+
+[data-bs-theme="dark"] .feature-card-media,
+body.dark-mode .feature-card-media {
+  background-color: #061A30;
+}
+
+[data-bs-theme="dark"] .account-menu,
+body.dark-mode .account-menu {
+  background-color: #0D2644;
+  border: 1px solid #1E3E66;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+[data-bs-theme="dark"] .account-menu .text-dark,
+body.dark-mode .account-menu .text-dark {
+  color: #FFFFFF !important;
+}

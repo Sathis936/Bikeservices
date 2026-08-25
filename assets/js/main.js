@@ -210,7 +210,7 @@
     'daily': {
       title: 'Daily Scooter & Moped Rental',
       crumb: 'Daily Scooter Rental',
-      image: 'assets/images/vispa.jpg',
+      image: 'assets/images/scooters/scooter-1.jpg',
       lead: 'Our daily scooter rental is the most popular choice for travelers wanting to discover hidden gems without hailing expensive taxis or waiting for packed buses.',
       price: '₹30/day',
       deposit: 'From ₹120'
@@ -218,7 +218,7 @@
     'hourly': {
       title: 'Hourly Hop & Short-Term Rental',
       crumb: 'Hourly Rental',
-      image: 'assets/images/scooters/scooter-2.jpg',
+      image: 'assets/images/scooters/scooter-6.jpg',
       lead: 'Flexible short-term rental by the hour for running quick errands, brunch trips, lunch meetings, or quick scenic sunset coastal rides.',
       price: '₹8/hour',
       deposit: 'From ₹80'
@@ -226,7 +226,7 @@
     'weekly': {
       title: 'Weekly Pass & Extended Road Trips',
       crumb: 'Weekly Rental',
-      image: 'assets/images/yamaha.jpg',
+      image: 'assets/images/scooters/scooter-4.jpg',
       lead: 'Save up to 25% on 7-day bookings with unlimited mileage on select models, free roadside swaps, and doorstep delivery.',
       price: '₹190/week',
       deposit: 'From ₹150'
@@ -234,7 +234,7 @@
     'monthly': {
       title: 'Monthly Long-Term Scooter Lease',
       crumb: 'Monthly Long-Term',
-      image: 'assets/images/honda pcx 160.jpg',
+      image: 'assets/images/scooters/scooter-3.jpg',
       lead: 'Comprehensive monthly lease with zero ownership hassle, complimentary periodic maintenance, and free replacement vehicles.',
       price: '₹490/month',
       deposit: 'From ₹200'
@@ -266,7 +266,7 @@
     'ev': {
       title: '100% Electric Scooter EV Fleet',
       crumb: 'Electric EV Fleet',
-      image: 'assets/images/Super Soco CPx.jpg',
+      image: 'assets/images/scooters/scooter-5.jpg',
       lead: 'Zero-emission smart dual-battery electric scooters with access to 18 rapid battery swap stations across the metropolitan region.',
       price: '₹42/day',
       deposit: 'From ₹200'

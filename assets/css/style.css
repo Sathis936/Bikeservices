@@ -329,10 +329,36 @@ body.dark-mode .btn-wishlist:hover {
   box-shadow: 0 4px 14px rgba(201, 162, 60, 0.3);
 }
 
-/* Account Dropdown */
+/* Account Dropdown & Nav Auth Buttons */
 .account-menu {
-  min-width: 190px;
+  min-width: 220px;
   margin-top: 0.65rem !important;
+  border-radius: var(--radius-md);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.nav-dashboard-btn {
+  font-weight: 600;
+  border-radius: 9px;
+  padding: 0.4rem 0.85rem;
+  background: var(--primary);
+  color: #FFFFFF !important;
+  border: none;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+  transition: all 0.2s ease;
+}
+
+.nav-dashboard-btn:hover {
+  background: var(--primary-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+.nav-login-btn {
+  font-weight: 600;
+  border-radius: 9px;
+  padding: 0.4rem 0.85rem;
+  transition: all 0.2s ease;
 }
 
 /* Compact CTA */
@@ -479,14 +505,25 @@ body.dark-mode .btn-wishlist:hover {
 
 .floating-stat-card {
   position: absolute;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
   padding: 0.85rem 1.25rem;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   z-index: 2;
+  color: #0F172A;
 }
+
+.floating-stat-card .fw-bold {
+  color: #0F172A !important;
+}
+
+.floating-stat-card .text-muted,
+.floating-stat-card .small {
+  color: #64748B !important;
+}
+
 
 /* ==========================================================================
    Booking Widget (Interactive & Responsive)
@@ -1167,13 +1204,19 @@ body.dark-mode .btn-wishlist:hover {
   margin: -2rem -1.75rem 1.25rem;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   overflow: hidden;
+  background: #091F38;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-card-media img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
+  object-position: center center;
   transition: var(--transition);
 }
 

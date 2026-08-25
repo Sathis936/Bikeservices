@@ -74,6 +74,9 @@
     </div>
 
     <div class="d-flex align-items-center gap-3">
+      <a href="customer-dashboard.html" class="btn btn-sm btn-primary d-inline-flex align-items-center gap-1">
+        <i class="bi bi-speedometer2"></i> Customer Dashboard
+      </a>
       <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
         <i class="bi bi-moon-stars-fill"></i>
       </button>
@@ -89,7 +92,7 @@
           <li><a class="dropdown-item small" href="my-bookings.html"><i class="bi bi-check-circle text-primary me-2"></i> Reservation #BK-482910 Confirmed</a></li>
         </ul>
       </div>
-      <a href="fleet.html" class="btn btn-sm btn-primary d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Rent Scooter</a>
+      <a href="fleet.html" class="btn btn-sm btn-outline-primary d-none d-sm-inline-flex"><i class="bi bi-plus-lg me-1"></i> Rent Scooter</a>
     </div>
   </header>
 
@@ -97,10 +100,17 @@
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="card border rounded-4 p-4 bg-white shadow-sm text-center mb-4">
-            <img src="assets/images/testimonials/avatar-1.svg" class="rounded-circle mb-3" width="90" height="90" alt="Alex Vance">
-            <h5 class="fw-bold mb-1">Alex Vance</h5>
-            <p class="text-muted small mb-3">Rider Member since June 2024</p>
-            <span class="badge bg-success-soft px-3 py-2 rounded-pill"><i class="bi bi-shield-check me-1"></i> License Verified</span>
+            <img src="assets/images/testimonials/avatar-1.svg" class="rounded-circle mb-3" width="90" height="90" alt="Alex Vance" id="profileUserAvatar">
+            <h5 class="fw-bold mb-1" id="profileUserName">Alex Vance</h5>
+            <p class="text-muted small mb-3" id="profileUserRole">Rider Member since June 2024</p>
+            <span class="badge bg-success-soft px-3 py-2 rounded-pill mb-4"><i class="bi bi-shield-check me-1"></i> License Verified</span>
+
+            <div class="d-grid gap-2 border-top pt-3 text-start">
+              <a href="customer-dashboard.html" class="btn btn-primary btn-sm"><i class="bi bi-speedometer2 me-2"></i> Open Dashboard</a>
+              <a href="active-rental.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-lightning-charge-fill me-2 text-warning"></i> View Active Ride</a>
+              <a href="my-bookings.html" class="btn btn-outline-secondary btn-sm"><i class="bi bi-calendar2-check me-2 text-success"></i> My Bookings</a>
+              <button type="button" class="btn btn-outline-danger btn-sm" onclick="window.RentORideAuth.logout()"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</button>
+            </div>
           </div>
         </div>
 
@@ -158,5 +168,29 @@
   <script src="assets/js/booking.js"></script>
   <script src="assets/js/dashboard.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = (window.RentORideAuth && window.RentORideAuth.getUser()) || {
+        name: 'Alex Vance',
+        email: 'alex.vance@example.com',
+        phone: '+1 (555) 019-2834'
+      };
+
+      const nameParts = (user.name || 'Alex Vance').split(' ');
+      const firstName = nameParts[0] || 'Alex';
+      const lastName = nameParts.slice(1).join(' ') || 'Vance';
+
+      const inputs = document.querySelectorAll('.dashboard-content form input');
+      if (inputs.length >= 4) {
+        inputs[0].value = firstName;
+        inputs[1].value = lastName;
+        inputs[2].value = user.email || 'alex.vance@example.com';
+        inputs[3].value = user.phone || '+1 (555) 019-2834';
+      }
+
+      const nameEl = document.getElementById('profileUserName');
+      if (nameEl) nameEl.textContent = user.name || 'Alex Vance';
+    });
+  </script>
 </body>
 </html>
