@@ -95,6 +95,13 @@ body.dark-mode .scooter-img-wrap {
   background: linear-gradient(180deg, #091F38 0%, #0F2D52 100%);
 }
 
+[data-bs-theme="dark"] [data-scooter-id="scooter-1"] .scooter-img-wrap,
+body.dark-mode [data-scooter-id="scooter-1"] .scooter-img-wrap,
+[data-bs-theme="dark"] .detail-media-card,
+body.dark-mode .detail-media-card {
+  background: linear-gradient(180deg, #0a1b2e 0%, #132a45 100%);
+}
+
 [data-bs-theme="dark"] .booking-form-control,
 [data-bs-theme="dark"] .form-control,
 [data-bs-theme="dark"] .form-select,

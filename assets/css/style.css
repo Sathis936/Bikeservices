@@ -608,6 +608,24 @@ body.dark-mode .btn-wishlist:hover {
   transform: scale(1.05);
 }
 
+/* Vespa Primavera 150 specific sizing and positioning:
+   vispa.jpg is a portrait image (735x877) whose mirrors reach near the top edge
+   and kickstand reaches the bottom edge. We use object-fit: contain with symmetrical
+   padding and a tailored background gradient to ensure the entire scooter is visible
+   without improper cropping or distortion at rest and during hover. */
+[data-scooter-id="scooter-1"] .scooter-img-wrap,
+.scooter-img-contain-wrap {
+  background: linear-gradient(180deg, #F1F5F9 0%, #E2E8F0 100%);
+}
+
+[data-scooter-id="scooter-1"] .scooter-img-wrap img,
+.scooter-img-contain-wrap img,
+.scooter-img-contain {
+  object-fit: contain;
+  object-position: center center;
+  padding: 8px 12px;
+}
+
 .scooter-badge-top {
   position: absolute;
   top: 1rem;
@@ -1226,12 +1244,18 @@ body.dark-mode .btn-wishlist:hover {
 /* ===== Scooter details page media ===== */
 .detail-media-card {
   overflow: hidden;
+  background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .detail-media-card img {
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  max-height: 480px;
+  object-fit: contain;
+  object-position: center center;
   border-radius: var(--radius-md);
 }
 
