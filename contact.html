@@ -71,6 +71,9 @@
           </ul>
 
           <div class="d-flex align-items-center gap-2 navbar-actions">
+            <a href="login.html" class="btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1">
+              <i class="bi bi-box-arrow-in-right"></i> Sign In
+            </a>
             <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
@@ -218,6 +221,86 @@
     </div>
   </div>
 </main>
+
+<!-- Interactive Map & Station Locations Section -->
+<section class="py-5 bg-light border-top">
+  <div class="container">
+    <div class="row align-items-center mb-4">
+      <div class="col-md-8">
+        <span class="section-subtitle">Find Our Stations</span>
+        <h2 class="h3 fw-bold mb-1">Our Rental Hubs &amp; Service Locations</h2>
+        <p class="text-muted mb-0">Visit our nearest hub for quick test rides, instant scooter pickups, or battery swaps.</p>
+      </div>
+      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <a href="coverage-area.html" class="btn btn-outline-primary">
+          <i class="bi bi-geo-alt-fill me-1"></i> View All 18 Stations
+        </a>
+      </div>
+    </div>
+
+    <!-- Responsive Embedded Map Frame -->
+    <div class="card border rounded-4 overflow-hidden shadow-sm mb-4">
+      <div class="ratio ratio-21x9" style="min-height: 340px;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153166!3d-37.81627974202167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sus!4v1614135678901!5m2!1sen!2sus" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Rent o Ride Hub Locations Map">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Quick Station Hub Cards -->
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card border rounded-4 p-3 bg-white shadow-sm h-100">
+          <div class="d-flex align-items-center gap-3">
+            <div class="feature-icon-box bg-primary-soft text-primary flex-shrink-0" style="width:46px; height:46px;">
+              <i class="bi bi-geo-alt-fill fs-5"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Downtown Central Hub</h6>
+              <p class="text-muted small mb-0">742 Evergreen Terrace, Downtown</p>
+              <span class="badge bg-success-soft text-success mt-1"><i class="bi bi-check-circle-fill me-1"></i>Open Now (06:00 - 23:30)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border rounded-4 p-3 bg-white shadow-sm h-100">
+          <div class="d-flex align-items-center gap-3">
+            <div class="feature-icon-box bg-secondary-soft text-secondary flex-shrink-0" style="width:46px; height:46px;">
+              <i class="bi bi-airplane-fill fs-5"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Airport Express Station</h6>
+              <p class="text-muted small mb-0">Terminal 2 Arrivals Bay, Airport Blvd</p>
+              <span class="badge bg-success-soft text-success mt-1"><i class="bi bi-check-circle-fill me-1"></i>Open 24/7</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card border rounded-4 p-3 bg-white shadow-sm h-100">
+          <div class="d-flex align-items-center gap-3">
+            <div class="feature-icon-box bg-success-soft text-success flex-shrink-0" style="width:46px; height:46px;">
+              <i class="bi bi-water fs-5"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-1">Beach Promenade Hub</h6>
+              <p class="text-muted small mb-0">108 Ocean Drive, South Beach</p>
+              <span class="badge bg-success-soft text-success mt-1"><i class="bi bi-check-circle-fill me-1"></i>Open Now (07:00 - 22:00)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer class="site-footer">
     <div class="container">

@@ -559,6 +559,17 @@ body.dark-mode .btn-wishlist:hover {
   transition: var(--transition);
 }
 
+.form-select.booking-form-control {
+  padding-right: 2.5rem !important;
+  background-position: right 0.75rem center;
+}
+
+[dir="rtl"] .form-select.booking-form-control {
+  padding-right: 0.85rem !important;
+  padding-left: 2.5rem !important;
+  background-position: left 0.75rem center;
+}
+
 .booking-form-control:focus {
   border-color: var(--primary);
   background-color: #FFFFFF;

@@ -73,49 +73,87 @@
     font-size: 0.75rem;
   }
 
-  /* Mobile Navbar Actions */
+  /* Mobile Navbar & Actions Alignment */
+  .site-header .navbar > .container {
+    flex-wrap: nowrap !important;
+  }
+
+  .site-header .navbar-brand {
+    margin-right: 0.5rem;
+    flex-shrink: 1;
+  }
+
   .navbar-actions {
-    gap: 0.3rem !important;
+    gap: 0.25rem !important;
+    flex-shrink: 0;
   }
 
   .navbar-actions .btn-icon {
-    width: 34px;
-    height: 34px;
-    font-size: 0.875rem;
+    width: 32px;
+    height: 32px;
+    font-size: 0.825rem;
     border-radius: 8px;
   }
 
   .navbar-actions .rtl-toggle-btn {
-    font-size: 0.6rem;
-    padding: 0 4px !important;
+    font-size: 0.58rem;
+    padding: 0 2px !important;
+    min-width: 28px;
+  }
+
+  .navbar-actions .navbar-toggler {
+    padding: 0 2px !important;
+  }
+
+  .navbar-actions .navbar-toggler i {
+    font-size: 1.4rem !important;
   }
 
   .brand-logo-img {
-    height: 32px !important;
+    height: 28px !important;
+    max-width: 100%;
+    object-fit: contain;
   }
 
   /* Dashboard on Small Mobile */
   .dashboard-topbar {
-    height: 60px;
-    padding: 0 0.85rem;
+    height: 56px;
+    padding: 0 0.65rem !important;
+    gap: 0.5rem !important;
+    flex-wrap: nowrap !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dashboard-topbar > div:first-child {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    gap: 0.4rem !important;
   }
 
   .dashboard-topbar h5 {
-    font-size: 1rem;
-    max-width: 180px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    min-width: 0;
+    flex: 1 1 auto;
+    margin: 0;
   }
 
   .dashboard-topbar .navbar-actions {
-    gap: 0.25rem;
+    flex-shrink: 0;
+    gap: 0.25rem !important;
   }
 
   .dashboard-topbar .navbar-actions .btn-icon {
-    width: 30px;
-    height: 30px;
-    font-size: 0.75rem;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    font-size: 0.725rem !important;
+    padding: 0 !important;
   }
 
   .dashboard-content {
@@ -136,17 +174,23 @@
   }
 
   /* Auth Forms on Mobile */
-  .card.p-4.p-md-5 {
+  .auth-section {
+    padding: 1.5rem 1rem !important;
+    min-height: 100vh;
+  }
+
+  .card.p-4.p-md-5,
+  .auth-card {
     padding: 1.5rem 1.15rem !important;
   }
 
   .auth-icon-wrap {
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
   }
 
   .auth-icon-wrap i {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   /* Tables */

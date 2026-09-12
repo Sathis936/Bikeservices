@@ -76,6 +76,9 @@
           </ul>
 
           <div class="d-flex align-items-center gap-2 navbar-actions">
+            <a href="login.html" class="btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1">
+              <i class="bi bi-box-arrow-in-right"></i> Sign In
+            </a>
             <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
@@ -203,13 +206,13 @@
 
   <!-- Interactive Live Booking Search Widget -->
   <section class="container">
-    <div class="booking-widget-card">
+    <div class="booking-widget-card shadow-sm">
       <h5 class="fw-bold mb-3 d-flex align-items-center gap-2">
         <i class="bi bi-search text-primary"></i> Find & Reserve Your Scooter
       </h5>
       <form id="bookingCalculatorForm" class="row g-3 align-items-end">
         <div class="col-lg-3 col-md-6">
-          <label for="calcScooter" class="booking-form-label">Select Model</label>
+          <label for="calcScooter" class="booking-form-label"><i class="bi bi-bicycle me-1"></i> Select Model</label>
           <select id="calcScooter" class="form-select booking-form-control">
             <option value="scooter-1" selected>Vespa Primavera 150 (₹35/day)</option>
             <option value="scooter-2">Niu NQi GT Pro EV (₹42/day)</option>
@@ -222,8 +225,8 @@
           </select>
         </div>
 
-        <div class="col-lg-2 col-md-6">
-          <label for="calcPickupStation" class="booking-form-label">Pick-up Station</label>
+        <div class="col-lg-3 col-md-6">
+          <label for="calcPickupStation" class="booking-form-label"><i class="bi bi-geo-alt me-1"></i> Pick-up Station</label>
           <select id="calcPickupStation" class="form-select booking-form-control">
             <option selected>Downtown Hub (Station 1)</option>
             <option>Airport Express Hub (Station 2)</option>
@@ -233,18 +236,18 @@
         </div>
 
         <div class="col-lg-2 col-md-6">
-          <label for="calcPickupDate" class="booking-form-label">Pick-up Date</label>
+          <label for="calcPickupDate" class="booking-form-label"><i class="bi bi-calendar-event me-1"></i> Pick-up Date</label>
           <input type="date" id="calcPickupDate" class="form-control booking-form-control" required>
         </div>
 
         <div class="col-lg-2 col-md-6">
-          <label for="calcReturnDate" class="booking-form-label">Return Date</label>
+          <label for="calcReturnDate" class="booking-form-label"><i class="bi bi-calendar-check me-1"></i> Return Date</label>
           <input type="date" id="calcReturnDate" class="form-control booking-form-control" required>
         </div>
 
-        <div class="col-lg-3 col-md-12">
+        <div class="col-lg-2 col-md-12">
           <button type="submit" class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2" style="height: 46px;">
-            <i class="bi bi-calendar-check-fill"></i> Instant Reserve (<span id="calcGrandTotal">₹105</span>)
+            <i class="bi bi-lightning-charge-fill"></i> Instant Reserve (<span id="calcGrandTotal">₹105</span>)
           </button>
         </div>
 
@@ -502,7 +505,7 @@
   </section>
 
   <!-- Why Choose Us Features Grid -->
-  <section class="section-padding">
+  <section class="section-padding bg-light border-top border-bottom">
     <div class="container">
       <div class="text-center max-w-700 mx-auto mb-5">
         <span class="section-subtitle">Why Ride With Us</span>
@@ -511,45 +514,57 @@
 
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon-box"><i class="bi bi-clock-history"></i></div>
-            <h5 class="fw-bold mb-2">Easy & Instant Booking</h5>
-            <p class="text-muted small">Book 24/7 through website or mobile without lengthy check-in lines or waiting times.</p>
+          <div class="feature-card h-100 bg-white">
+            <div class="feature-card-media">
+              <img src="assets/images/banners/urban-mobility.svg" alt="Instant Booking">
+            </div>
+            <h5 class="fw-bold mb-2 d-flex align-items-center gap-2"><i class="bi bi-clock-history"></i> Easy & Instant Booking</h5>
+            <p class="text-muted small mb-0">Book 24/7 through website or mobile without lengthy check-in lines or waiting times.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon-box"><i class="bi bi-tag-fill"></i></div>
-            <h5 class="fw-bold mb-2">Transparent Affordable Pricing</h5>
-            <p class="text-muted small">All-inclusive rates with taxes, third-party liability insurance, and helmet included.</p>
+          <div class="feature-card h-100 bg-white">
+            <div class="feature-card-media">
+              <img src="assets/images/vispa.jpg" alt="Transparent Pricing">
+            </div>
+            <h5 class="fw-bold mb-2 d-flex align-items-center gap-2"><i class="bi bi-tag"></i> Transparent Affordable Pricing</h5>
+            <p class="text-muted small mb-0">All-inclusive rates with taxes, third-party liability insurance, and helmet included.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon-box"><i class="bi bi-wrench-adjustable-circle"></i></div>
-            <h5 class="fw-bold mb-2">Well Maintained Fleet</h5>
-            <p class="text-muted small">Every scooter undergoes a 25-point mechanical inspection and sanitization prior to every trip.</p>
+          <div class="feature-card h-100 bg-white">
+            <div class="feature-card-media">
+              <img src="assets/images/banners/maintenance.svg" alt="Well Maintained Fleet">
+            </div>
+            <h5 class="fw-bold mb-2 d-flex align-items-center gap-2"><i class="bi bi-shield-check"></i> Well Maintained Fleet</h5>
+            <p class="text-muted small mb-0">Every scooter undergoes a 25-point mechanical inspection and sanitization prior to every trip.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon-box"><i class="bi bi-calendar3-range"></i></div>
-            <h5 class="fw-bold mb-2">Flexible Rental Plans</h5>
-            <p class="text-muted small">Rent by the hour for a quick errand or get massive weekly and monthly discounted rates.</p>
+          <div class="feature-card h-100 bg-white">
+            <div class="feature-card-media">
+              <img src="assets/images/honda pcx 160.jpg" alt="Flexible Rental Plans">
+            </div>
+            <h5 class="fw-bold mb-2 d-flex align-items-center gap-2"><i class="bi bi-calendar3"></i> Flexible Rental Plans</h5>
+            <p class="text-muted small mb-0">Rent by the hour for a quick errand or get massive weekly and monthly discounted rates.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon-box"><i class="bi bi-headset"></i></div>
-            <h5 class="fw-bold mb-2">24/7 Roadside Support</h5>
-            <p class="text-muted small">Emergency replacement vehicle dispatch and live chat support at any hour of the day.</p>
+          <div class="feature-card h-100 bg-white">
+            <div class="feature-card-media">
+              <img src="assets/images/Super Soco CPx.jpg" alt="24/7 Roadside Support">
+            </div>
+            <h5 class="fw-bold mb-2 d-flex align-items-center gap-2"><i class="bi bi-headset"></i> 24/7 Roadside Support</h5>
+            <p class="text-muted small mb-0">Emergency replacement vehicle dispatch and live chat support at any hour of the day.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="feature-card">
-            <div class="feature-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
-            <h5 class="fw-bold mb-2">Wide Station Coverage</h5>
-            <p class="text-muted small">18 pick-up and drop-off hubs located across key transit hubs, hotels, and beaches.</p>
+          <div class="feature-card h-100 bg-white">
+            <div class="feature-card-media">
+              <img src="assets/images/banners/map-coverage.svg" alt="Wide Station Coverage">
+            </div>
+            <h5 class="fw-bold mb-2 d-flex align-items-center gap-2"><i class="bi bi-geo-alt"></i> Wide Station Coverage</h5>
+            <p class="text-muted small mb-0">18 pick-up and drop-off hubs located across key transit hubs, hotels, and beaches.</p>
           </div>
         </div>
       </div>

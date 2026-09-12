@@ -194,13 +194,13 @@
           if (loginBtn) loginBtn.style.display = 'none';
         } else {
           if (dashBtn) dashBtn.style.display = 'none';
-          if (!loginBtn) {
             loginBtn = document.createElement('a');
             loginBtn.href = 'login.html';
-            loginBtn.className = 'btn btn-sm btn-outline-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
+            loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
             loginBtn.innerHTML = '<i class="bi bi-box-arrow-in-right"></i> Sign In';
             actionsContainer.insertBefore(loginBtn, actionsContainer.firstChild);
           } else {
+            loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
             loginBtn.style.display = '';
           }
         }

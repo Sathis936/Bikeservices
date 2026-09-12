@@ -76,6 +76,9 @@
           </ul>
 
           <div class="d-flex align-items-center gap-2 navbar-actions">
+            <a href="login.html" class="btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1">
+              <i class="bi bi-box-arrow-in-right"></i> Sign In
+            </a>
             <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
@@ -143,28 +146,77 @@
   <!-- Modern Hero Section -->
   <section class="hero-section hero-parallax-dark bg-dark text-white position-relative">
     <div class="hero-parallax-layer" aria-hidden="true"></div>
-    <div class="container py-4">
+    <div class="container py-4 position-relative" style="z-index: 2;">
       <div class="row align-items-center gy-5">
         <div class="col-lg-7">
-          <span class="badge bg-secondary-soft text-secondary px-3 py-2 rounded-pill fw-bold mb-3">
-            <i class="bi bi-plug-fill me-1"></i> 100% Zero Emission Urban Mobility
+          <span class="badge bg-primary-soft text-primary px-3 py-2 rounded-pill fw-bold mb-3 border border-primary border-opacity-25">
+            <i class="bi bi-lightning-charge me-1"></i> 100% Zero Emission Urban Mobility
           </span>
           <h1 class="hero-title text-white">Smart Scooter Rental for Modern Urban Mobility</h1>
-          <p class="hero-lead text-white-50">
+          <p class="hero-lead text-white pe-lg-4" style="opacity: 0.9; font-size: 1.1rem;">
             Unlock next-generation electric scooters with your phone. Bypass city gridlock, save on parking, and travel clean with high-range dual battery mopeds.
           </p>
           <div class="d-flex flex-wrap gap-3 mb-4">
-            <a href="fleet.html" class="btn btn-secondary-accent btn-lg"><i class="bi bi-qr-code-scan me-1"></i> Scan & Unlock Ride</a>
+            <a href="fleet.html" class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-qr-code-scan me-1"></i> Scan & Unlock Ride</a>
             <a href="coverage-area.html" class="btn btn-outline-light btn-lg"><i class="bi bi-geo-alt me-1"></i> Find Nearby Stations</a>
           </div>
-          <div class="d-flex gap-4 pt-2 text-white-50 small">
-            <div><i class="bi bi-lightning-charge-fill text-secondary me-1"></i> Swappable Batteries</div>
-            <div><i class="bi bi-shield-check text-secondary me-1"></i> GPS Tracked Fleet</div>
-            <div><i class="bi bi-phone-fill text-secondary me-1"></i> Keyless App Access</div>
+          
+          <!-- High Contrast Hero Badges -->
+          <div class="d-flex flex-wrap gap-3 pt-2">
+            <span class="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2 fw-semibold">
+              <i class="bi bi-lightning-charge-fill text-warning"></i> Swappable Batteries
+            </span>
+            <span class="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2 fw-semibold">
+              <i class="bi bi-shield-check text-info"></i> GPS Tracked Fleet
+            </span>
+            <span class="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2 fw-semibold">
+              <i class="bi bi-phone-fill text-warning"></i> Keyless App Access
+            </span>
           </div>
         </div>
         <div class="col-lg-5 text-center">
           <img src="assets/images/banners/app-mockup.svg" alt="App Mockup" class="img-fluid" style="max-height: 480px; filter: drop-shadow(0 20px 30px rgba(0,194,168,0.2));">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick EV Station Finder & Range Calculator Bar -->
+  <section class="container mt-n4 position-relative" style="z-index: 5; margin-top: -2rem;">
+    <div class="bg-white p-4 rounded-4 shadow-lg border">
+      <div class="row g-3 align-items-center">
+        <div class="col-lg-4 col-md-6">
+          <label class="small fw-bold text-muted text-uppercase mb-1"><i class="bi bi-geo-alt me-1"></i> Nearest EV Swap Hub</label>
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-compass"></i></span>
+            <select class="form-select bg-light border-start-0 fw-semibold">
+              <option selected>Downtown Supercharging Hub (Station 1 - 12 Available)</option>
+              <option>Airport Fast-Swap Hub (Station 2 - 8 Available)</option>
+              <option>Beachfront Promenade Hub (Station 3 - 15 Available)</option>
+              <option>Tech Park Metro Hub (Station 4 - 20 Available)</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <label class="small fw-bold text-muted text-uppercase mb-1"><i class="bi bi-battery-charging me-1"></i> Desired Range</label>
+          <select class="form-select bg-light fw-semibold">
+            <option selected>Up to 60 km (Standard City Trip)</option>
+            <option>Up to 100 km (Full Day Commute)</option>
+            <option>140+ km (Dual Battery Long Tour)</option>
+          </select>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <label class="small fw-bold text-muted text-uppercase mb-1"><i class="bi bi-clock-history me-1"></i> Duration</label>
+          <select class="form-select bg-light fw-semibold">
+            <option selected>Hourly Flash (Pay As You Go)</option>
+            <option>Full Day (24 Hours - Best Value)</option>
+            <option>Weekly Unlimited Explorer</option>
+          </select>
+        </div>
+        <div class="col-lg-2 col-md-6 d-flex align-items-end">
+          <a href="fleet.html" class="btn btn-primary w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2" style="height: 44px;">
+            <i class="bi bi-search"></i> Find Scooters
+          </a>
         </div>
       </div>
     </div>
@@ -175,7 +227,7 @@
     <div class="container">
       <div class="row g-4 text-center">
         <div class="col-lg-3 col-6">
-          <div class="display-5 fw-bold text-secondary font-heading">1.2M+</div>
+          <div class="display-5 fw-bold text-primary font-heading">1.2M+</div>
           <div class="text-muted fw-semibold">Zero-Emission Kilometers</div>
         </div>
         <div class="col-lg-3 col-6">
@@ -183,7 +235,7 @@
           <div class="text-muted fw-semibold">CO2 Offset This Year</div>
         </div>
         <div class="col-lg-3 col-6">
-          <div class="display-5 fw-bold text-secondary font-heading">&lt; 30 Sec</div>
+          <div class="display-5 fw-bold text-primary font-heading">&lt; 30 Sec</div>
           <div class="text-muted fw-semibold">Average App Unlock Time</div>
         </div>
         <div class="col-lg-3 col-6">
@@ -202,30 +254,36 @@
           <img src="assets/images/banners/urban-mobility.svg" alt="Urban Mobility" class="img-fluid rounded-4 shadow-lg">
         </div>
         <div class="col-lg-6">
-          <span class="section-subtitle">App & Mobile Experience</span>
+          <span class="section-subtitle">Seamless App Experience</span>
           <h2 class="display-6 fw-bold mb-4">Rent in Seconds. Return Anywhere.</h2>
           
           <div class="d-flex gap-3 mb-4">
-            <div class="feature-icon-box bg-primary-soft text-primary flex-shrink-0"><i class="bi bi-phone"></i></div>
+            <div class="feature-card-media flex-shrink-0" style="width: 72px;">
+              <img src="assets/images/niqi.jpg" alt="Locate Scooter" class="rounded-3 shadow-sm">
+            </div>
             <div>
-              <h5 class="fw-bold mb-1">1. Locate & Reserve Nearby</h5>
-              <p class="text-muted small">Open the interactive map to see available scooters, battery levels, and range estimates in real-time.</p>
+              <h5 class="fw-bold mb-1 d-flex align-items-center gap-2"><i class="bi bi-phone"></i> 1. Locate & Reserve Nearby</h5>
+              <p class="text-muted small mb-0">Open the interactive map to see available scooters, live battery levels, and range estimates in real-time.</p>
             </div>
           </div>
 
           <div class="d-flex gap-3 mb-4">
-            <div class="feature-icon-box bg-secondary-soft text-secondary flex-shrink-0"><i class="bi bi-key-fill"></i></div>
+            <div class="feature-card-media flex-shrink-0" style="width: 72px;">
+              <img src="assets/images/Super Soco CPx.jpg" alt="Digital Key" class="rounded-3 shadow-sm">
+            </div>
             <div>
-              <h5 class="fw-bold mb-1">2. One-Tap Digital Key</h5>
-              <p class="text-muted small">Scan the QR code on the handlebar to ignite the motor without physical keys. Helmet trunk pops open automatically.</p>
+              <h5 class="fw-bold mb-1 d-flex align-items-center gap-2"><i class="bi bi-key"></i> 2. One-Tap Digital Key</h5>
+              <p class="text-muted small mb-0">Scan the QR code on the handlebar to ignite the motor without physical keys. Helmet trunk pops open automatically.</p>
             </div>
           </div>
 
           <div class="d-flex gap-3">
-            <div class="feature-icon-box bg-success-soft text-success flex-shrink-0"><i class="bi bi-p-circle-fill"></i></div>
+            <div class="feature-card-media flex-shrink-0" style="width: 72px;">
+              <img src="assets/images/banners/map-coverage.svg" alt="Designated Hubs" class="rounded-3 shadow-sm">
+            </div>
             <div>
-              <h5 class="fw-bold mb-1">3. Park in Designated Hubs</h5>
-              <p class="text-muted small">End your trip at any partner charging hub to automatically close your rental receipt and trigger deposit release.</p>
+              <h5 class="fw-bold mb-1 d-flex align-items-center gap-2"><i class="bi bi-geo-alt"></i> 3. Park in Designated Hubs</h5>
+              <p class="text-muted small mb-0">End your trip at any partner charging hub to automatically close your rental receipt and trigger instant deposit release.</p>
             </div>
           </div>
         </div>
@@ -233,12 +291,48 @@
     </div>
   </section>
 
-  <!-- Electric Fleet Highlight -->
-  <section class="section-padding bg-white border-top border-bottom">
+  <!-- Battery Swapping & Supercharging Network -->
+  <section class="section-padding bg-light border-top border-bottom">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <span class="section-subtitle">Eco-Smart Lineup</span>
-        <h2 class="display-6 fw-bold">Next-Gen Electric Fleet</h2>
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 order-lg-2">
+          <img src="assets/images/home2.jpg" alt="Battery Swap Station" class="img-fluid rounded-4 shadow-lg w-100" style="aspect-ratio: 16/10; object-fit: cover;">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <span class="section-subtitle">Never Run Out of Power</span>
+          <h2 class="display-6 fw-bold mb-3">60-Second Instant Battery Swaps</h2>
+          <p class="text-muted mb-4">
+            Say goodbye to charging delays. Pull up to any of our 18 automated battery swapping lockers across the metro area, slide in your depleted cell, and pop in a 100% charged battery in under a minute.
+          </p>
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="p-3 bg-white border rounded-3 shadow-sm h-100">
+                <h6 class="fw-bold text-primary mb-1 d-flex align-items-center gap-2"><i class="bi bi-lightning-charge"></i> 18 Metro Stations</h6>
+                <p class="text-muted small mb-0">Strategically placed at transit hubs, tech parks, and commercial avenues.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-white border rounded-3 shadow-sm h-100">
+                <h6 class="fw-bold text-primary mb-1 d-flex align-items-center gap-2"><i class="bi bi-check-circle"></i> Free Unlimited Swaps</h6>
+                <p class="text-muted small mb-0">All battery swaps are 100% free and included in your rental rate.</p>
+              </div>
+            </div>
+          </div>
+          <a href="coverage-area.html" class="btn btn-outline-primary"><i class="bi bi-map me-1"></i> View Interactive Station Map</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electric Fleet Highlight -->
+  <section class="section-padding bg-white border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+        <div>
+          <span class="section-subtitle">Eco-Smart Lineup</span>
+          <h2 class="display-6 fw-bold mb-0">Next-Gen Electric Fleet</h2>
+        </div>
+        <a href="fleet.html" class="btn btn-outline-primary mt-3 mt-md-0"><i class="bi bi-grid me-1"></i> View All Electric Models</a>
       </div>
 
       <div class="row g-4">
@@ -291,24 +385,24 @@
         </div>
 
         <!-- EV Model 3 -->
-        <div class="col-lg-4 col-md-6" data-scooter-id="scooter-1">
+        <div class="col-lg-4 col-md-6" data-scooter-id="scooter-8">
           <div class="scooter-card">
             <div class="scooter-img-wrap">
-              <span class="badge bg-primary-soft scooter-badge-top">Classic Styling</span>
-              <button type="button" class="wishlist-btn" title="Add to Wishlist" onclick="RentORideBooking.toggleWishlist('scooter-1')"><i class="bi bi-heart"></i></button>
-              <img src="assets/images/vispa.jpg" alt="Vespa Elettrica">
+              <span class="badge bg-primary-soft scooter-badge-top">Cargo EV</span>
+              <button type="button" class="wishlist-btn" title="Add to Wishlist" onclick="RentORideBooking.toggleWishlist('scooter-8')"><i class="bi bi-heart"></i></button>
+              <img src="assets/images/Kymco Agility Cargo 125.jpg" alt="Delivery Moped 125">
             </div>
             <div class="scooter-card-body">
-              <h5 class="fw-bold mb-1">Vespa Primavera 150</h5>
-              <p class="text-muted small">Iconic Italian design with i-Get Euro 5 engine</p>
+              <h5 class="fw-bold mb-1">Delivery Moped 125</h5>
+              <p class="text-muted small">Reinforced rear cargo rack & high payload</p>
               <div class="scooter-specs-grid">
-                <div class="spec-item"><i class="bi bi-speedometer2"></i> <span>95 km/h</span></div>
-                <div class="spec-item"><i class="bi bi-fuel-pump"></i> <span>40 km/l</span></div>
-                <div class="spec-item"><i class="bi bi-person"></i> <span>2 Seats</span></div>
+                <div class="spec-item"><i class="bi bi-speedometer2"></i> <span>75 km/h</span></div>
+                <div class="spec-item"><i class="bi bi-battery-charging"></i> <span>110 km</span></div>
+                <div class="spec-item"><i class="bi bi-box"></i> <span>45L Cargo</span></div>
               </div>
               <div class="d-flex justify-content-between align-items-center pt-2">
-                <div class="scooter-price-wrap"><span class="price-amount">₹35</span><span class="price-unit">/ day</span></div>
-                <a href="scooter-details.html?id=scooter-1" class="btn btn-primary btn-sm">Rent This EV</a>
+                <div class="scooter-price-wrap"><span class="price-amount">₹32</span><span class="price-unit">/ day</span></div>
+                <a href="scooter-details.html?id=scooter-8" class="btn btn-primary btn-sm">Rent This EV</a>
               </div>
             </div>
           </div>
@@ -317,8 +411,82 @@
     </div>
   </section>
 
+  <!-- EV Subscription & Pricing Comparison -->
+  <section class="section-padding bg-light border-bottom">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="section-subtitle">Transparent Plans</span>
+        <h2 class="display-6 fw-bold">Simple, Predictable EV Pricing</h2>
+        <p class="text-muted">Choose pay-as-you-go flexibility or subscribe to all-inclusive monthly passes.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Plan 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 p-4 border rounded-4 bg-white shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Hourly Flex</h5>
+                <span class="badge bg-light text-dark border">Short Errands</span>
+              </div>
+              <div class="display-6 fw-bold text-dark mb-3">₹15 <span class="fs-6 text-muted fw-normal">/ hour</span></div>
+              <ul class="list-unstyled d-flex flex-column gap-2 text-muted small mb-4">
+                <li><i class="bi bi-check2 text-primary me-2"></i> Free helmet included</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> 100% zero gas fees</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Instant app lock & unlock</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Free swap at all 18 hubs</li>
+              </ul>
+            </div>
+            <a href="fleet.html" class="btn btn-outline-primary w-100">Choose Hourly</a>
+          </div>
+        </div>
+
+        <!-- Plan 2 (Featured) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 p-4 border-2 border-primary rounded-4 bg-white shadow d-flex flex-column justify-content-between position-relative">
+            <span class="badge bg-primary text-white position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Most Popular</span>
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Daily Unlimited</h5>
+                <span class="badge bg-primary-soft text-primary">Day Trip</span>
+              </div>
+              <div class="display-6 fw-bold text-primary mb-3">₹42 <span class="fs-6 text-muted fw-normal">/ day</span></div>
+              <ul class="list-unstyled d-flex flex-column gap-2 text-muted small mb-4">
+                <li><i class="bi bi-check2 text-primary me-2"></i> 24-hour full access</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Comprehensive damage waiver</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Passenger helmet included</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Doorstep swap & recovery</li>
+              </ul>
+            </div>
+            <a href="fleet.html" class="btn btn-primary w-100 shadow-sm">Reserve Daily Pass</a>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 p-4 border rounded-4 bg-white shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold mb-0">Monthly Pro EV</h5>
+                <span class="badge bg-light text-dark border">Commuter</span>
+              </div>
+              <div class="display-6 fw-bold text-dark mb-3">₹299 <span class="fs-6 text-muted fw-normal">/ month</span></div>
+              <ul class="list-unstyled d-flex flex-column gap-2 text-muted small mb-4">
+                <li><i class="bi bi-check2 text-primary me-2"></i> Dedicated home smart charger</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Priority battery swap lanes</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Free weekly maintenance check</li>
+                <li><i class="bi bi-check2 text-primary me-2"></i> Zero cancellation fees</li>
+              </ul>
+            </div>
+            <a href="pricing.html" class="btn btn-outline-primary w-100">Subscribe Monthly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ Accordion -->
-  <section class="section-padding">
+  <section class="section-padding bg-white">
     <div class="container max-w-800">
       <div class="text-center mb-5">
         <span class="section-subtitle">Got Questions?</span>
@@ -334,7 +502,7 @@
           </h2>
           <div id="faqC1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordionHome2">
             <div class="accordion-body text-muted">
-              For scooters with a top speed under 45 km/h, a standard valid car driver's license is sufficient. For our high-speed highway-capable models (such as the PCX 160 or Super Soco CPx), a standard motorcycle endorsement is required.
+              For scooters with a top speed under 45 km/h, a standard valid car driver's license is sufficient. For our high-speed highway-capable models (such as the Super Soco CPx), a standard motorcycle endorsement is required.
             </div>
           </div>
         </div>
@@ -364,6 +532,21 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- High-Impact Action Banner -->
+  <section class="py-5 bg-dark text-white border-top">
+    <div class="container text-center py-4">
+      <span class="badge bg-primary-soft text-primary px-3 py-2 rounded-pill fw-bold mb-3">Join 15,000+ Urban Riders</span>
+      <h2 class="display-6 fw-bold mb-3 text-white">Ready to Electrify Your City Commute?</h2>
+      <p class="text-white-50 max-w-700 mx-auto mb-4">
+        Download the Rent o Ride app today, unlock your nearest smart scooter in 30 seconds, and experience zero-emission freedom.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="register.html" class="btn btn-primary btn-lg shadow-sm"><i class="bi bi-person-plus me-1"></i> Create Free Account</a>
+        <a href="fleet.html" class="btn btn-outline-light btn-lg"><i class="bi bi-bicycle me-1"></i> Explore EV Fleet</a>
       </div>
     </div>
   </section>
