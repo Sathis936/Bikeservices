@@ -194,6 +194,7 @@
           if (loginBtn) loginBtn.style.display = 'none';
         } else {
           if (dashBtn) dashBtn.style.display = 'none';
+          if (!loginBtn) {
             loginBtn = document.createElement('a');
             loginBtn.href = 'login.html';
             loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
@@ -290,26 +291,34 @@
     }
   };
 
-  document.addEventListener('DOMContentLoaded', () => {
+  const initTheme = () => {
     window.RentORideTheme.updateIcons();
     window.RentORideTheme.initFloatingWidget();
     window.RentORideTheme.initParallax();
     window.RentORideAuth.syncNavbar();
+  };
 
-    // Bind any in-page toggles
-    document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.RentORideTheme.toggleTheme();
-      });
-    });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTheme);
+  } else {
+    initTheme();
+  }
 
-    document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.RentORideTheme.toggleDir();
-      });
-    });
+  // Global event delegation: works reliably across all pages, dynamic headers, offcanvas, and dashboards
+  document.addEventListener('click', (e) => {
+    const themeBtn = e.target.closest('.theme-toggle-btn');
+    if (themeBtn) {
+      e.preventDefault();
+      window.RentORideTheme.toggleTheme();
+      return;
+    }
+
+    const rtlBtn = e.target.closest('.rtl-toggle-btn');
+    if (rtlBtn) {
+      e.preventDefault();
+      window.RentORideTheme.toggleDir();
+      return;
+    }
   });
 })();
 
