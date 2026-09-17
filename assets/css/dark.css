@@ -75,12 +75,14 @@ body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
 }
 
 [data-bs-theme="dark"] .booking-widget-card,
+[data-bs-theme="dark"] .ev-finder-card,
 [data-bs-theme="dark"] .scooter-card,
 [data-bs-theme="dark"] .feature-card,
 [data-bs-theme="dark"] .testimonial-card,
 [data-bs-theme="dark"] .stat-card,
 [data-bs-theme="dark"] .card,
 body.dark-mode .booking-widget-card,
+body.dark-mode .ev-finder-card,
 body.dark-mode .scooter-card,
 body.dark-mode .feature-card,
 body.dark-mode .testimonial-card,
@@ -265,6 +267,54 @@ body.dark-mode .bg-danger-soft {
 body.dark-mode .bg-info-soft {
   background-color: rgba(14, 165, 233, 0.15) !important;
   color: #7DD3FC !important;
+}
+
+/* High Contrast Badges positioned over images in Dark Mode */
+[data-bs-theme="dark"] .scooter-badge-top,
+[data-bs-theme="dark"] .scooter-img-wrap .badge,
+body.dark-mode .scooter-badge-top,
+body.dark-mode .scooter-img-wrap .badge {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+[data-bs-theme="dark"] .scooter-badge-top.bg-success-soft,
+[data-bs-theme="dark"] .scooter-img-wrap .badge.bg-success-soft,
+body.dark-mode .scooter-badge-top.bg-success-soft,
+body.dark-mode .scooter-img-wrap .badge.bg-success-soft {
+  background-color: #065F46 !important;
+  color: #FFFFFF !important;
+  border-color: #10B981 !important;
+}
+
+[data-bs-theme="dark"] .scooter-badge-top.bg-primary-soft,
+[data-bs-theme="dark"] .scooter-img-wrap .badge.bg-primary-soft,
+body.dark-mode .scooter-badge-top.bg-primary-soft,
+body.dark-mode .scooter-img-wrap .badge.bg-primary-soft {
+  background-color: #C2410C !important;
+  color: #FFFFFF !important;
+  border-color: #F97316 !important;
+}
+
+[data-bs-theme="dark"] .scooter-badge-top.bg-danger-soft,
+[data-bs-theme="dark"] .scooter-img-wrap .badge.bg-danger-soft,
+body.dark-mode .scooter-badge-top.bg-danger-soft,
+body.dark-mode .scooter-img-wrap .badge.bg-danger-soft {
+  background-color: #B91C1C !important;
+  color: #FFFFFF !important;
+  border-color: #EF4444 !important;
+}
+
+[data-bs-theme="dark"] .scooter-badge-top.bg-info-soft,
+[data-bs-theme="dark"] .scooter-img-wrap .badge.bg-info-soft,
+body.dark-mode .scooter-badge-top.bg-info-soft,
+body.dark-mode .scooter-img-wrap .badge.bg-info-soft {
+  background-color: #0369A1 !important;
+  color: #FFFFFF !important;
+  border-color: #38BDF8 !important;
 }
 
 /* Muted text stays comfortably readable, never harsh white */

@@ -164,13 +164,13 @@
           <!-- High Contrast Hero Badges -->
           <div class="d-flex flex-wrap gap-3 pt-2">
             <span class="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2 fw-semibold">
-              <i class="bi bi-lightning-charge-fill text-warning"></i> Swappable Batteries
+              <i class="bi bi-lightning-charge-fill"></i> Swappable Batteries
             </span>
             <span class="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2 fw-semibold">
-              <i class="bi bi-shield-check text-info"></i> GPS Tracked Fleet
+              <i class="bi bi-shield-check"></i> GPS Tracked Fleet
             </span>
             <span class="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2 fw-semibold">
-              <i class="bi bi-phone-fill text-warning"></i> Keyless App Access
+              <i class="bi bi-phone-fill"></i> Keyless App Access
             </span>
           </div>
         </div>
@@ -182,14 +182,14 @@
   </section>
 
   <!-- Quick EV Station Finder & Range Calculator Bar -->
-  <section class="container mt-n4 position-relative" style="z-index: 5; margin-top: -2rem;">
-    <div class="bg-white p-4 rounded-4 shadow-lg border">
-      <div class="row g-3 align-items-center">
+  <section class="container position-relative" style="z-index: 5; margin-top: -2.25rem;">
+    <div class="ev-finder-card">
+      <div class="row g-3 align-items-end">
         <div class="col-lg-4 col-md-6">
           <label class="small fw-bold text-muted text-uppercase mb-1"><i class="bi bi-geo-alt me-1"></i> Nearest EV Swap Hub</label>
           <div class="input-group">
-            <span class="input-group-text bg-light border-end-0"><i class="bi bi-compass"></i></span>
-            <select class="form-select bg-light border-start-0 fw-semibold">
+            <span class="input-group-text bg-light border-end-0 text-muted ev-finder-control"><i class="bi bi-compass"></i></span>
+            <select class="form-select bg-light border-start-0 fw-semibold ev-finder-control">
               <option selected>Downtown Supercharging Hub (Station 1 - 12 Available)</option>
               <option>Airport Fast-Swap Hub (Station 2 - 8 Available)</option>
               <option>Beachfront Promenade Hub (Station 3 - 15 Available)</option>
@@ -199,7 +199,7 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <label class="small fw-bold text-muted text-uppercase mb-1"><i class="bi bi-battery-charging me-1"></i> Desired Range</label>
-          <select class="form-select bg-light fw-semibold">
+          <select class="form-select bg-light fw-semibold ev-finder-control">
             <option selected>Up to 60 km (Standard City Trip)</option>
             <option>Up to 100 km (Full Day Commute)</option>
             <option>140+ km (Dual Battery Long Tour)</option>
@@ -207,14 +207,15 @@
         </div>
         <div class="col-lg-3 col-md-6">
           <label class="small fw-bold text-muted text-uppercase mb-1"><i class="bi bi-clock-history me-1"></i> Duration</label>
-          <select class="form-select bg-light fw-semibold">
+          <select class="form-select bg-light fw-semibold ev-finder-control">
             <option selected>Hourly Flash (Pay As You Go)</option>
             <option>Full Day (24 Hours - Best Value)</option>
             <option>Weekly Unlimited Explorer</option>
           </select>
         </div>
-        <div class="col-lg-2 col-md-6 d-flex align-items-end">
-          <a href="fleet.html" class="btn btn-primary w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2" style="height: 44px;">
+        <div class="col-lg-2 col-md-6">
+          <label class="small fw-bold text-uppercase mb-1 d-none d-md-block opacity-0 select-none" aria-hidden="true">&nbsp;</label>
+          <a href="fleet.html" class="btn btn-primary w-100 ev-finder-btn d-flex align-items-center justify-content-center gap-2">
             <i class="bi bi-search"></i> Find Scooters
           </a>
         </div>
@@ -267,7 +268,7 @@
             </div>
             <div class="flex-grow-1">
               <h5 class="fw-bold mb-1 d-flex align-items-center gap-2">
-                <i class="bi bi-phone text-primary"></i> Locate &amp; Reserve Nearby
+                <i class="bi bi-phone"></i> Locate &amp; Reserve Nearby
               </h5>
               <p class="text-muted small mb-0">Open the interactive map to see available scooters, live battery levels, and range estimates in real-time.</p>
             </div>
@@ -281,7 +282,7 @@
             </div>
             <div class="flex-grow-1">
               <h5 class="fw-bold mb-1 d-flex align-items-center gap-2">
-                <i class="bi bi-key text-primary"></i> One-Tap Digital Key
+                <i class="bi bi-key"></i> One-Tap Digital Key
               </h5>
               <p class="text-muted small mb-0">Scan the QR code on the handlebar to ignite the motor without physical keys. Helmet trunk pops open automatically.</p>
             </div>
@@ -295,7 +296,7 @@
             </div>
             <div class="flex-grow-1">
               <h5 class="fw-bold mb-1 d-flex align-items-center gap-2">
-                <i class="bi bi-geo-alt text-primary"></i> Park in Designated Hubs
+                <i class="bi bi-geo-alt"></i> Park in Designated Hubs
               </h5>
               <p class="text-muted small mb-0">End your trip at any partner charging hub to automatically close your rental receipt and trigger instant deposit release.</p>
             </div>
@@ -321,13 +322,13 @@
           <div class="row g-3 mb-4">
             <div class="col-sm-6">
               <div class="p-3 bg-white border rounded-3 shadow-sm h-100">
-                <h6 class="fw-bold text-primary mb-1 d-flex align-items-center gap-2"><i class="bi bi-lightning-charge"></i> 18 Metro Stations</h6>
+                <h6 class="fw-bold mb-1 d-flex align-items-center gap-2"><i class="bi bi-lightning-charge"></i> 18 Metro Stations</h6>
                 <p class="text-muted small mb-0">Strategically placed at transit hubs, tech parks, and commercial avenues.</p>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="p-3 bg-white border rounded-3 shadow-sm h-100">
-                <h6 class="fw-bold text-primary mb-1 d-flex align-items-center gap-2"><i class="bi bi-check-circle"></i> Free Unlimited Swaps</h6>
+                <h6 class="fw-bold mb-1 d-flex align-items-center gap-2"><i class="bi bi-check-circle"></i> Free Unlimited Swaps</h6>
                 <p class="text-muted small mb-0">All battery swaps are 100% free and included in your rental rate.</p>
               </div>
             </div>
@@ -458,9 +459,9 @@
         <!-- Plan 2 (Featured) -->
         <div class="col-lg-4 col-md-6">
           <div class="card h-100 p-4 border-2 border-primary rounded-4 bg-white shadow d-flex flex-column justify-content-between position-relative">
-            <span class="badge bg-primary text-white position-absolute top-0 end-0 m-3 px-3 py-1 rounded-pill">Most Popular</span>
+            <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle rounded-pill px-3 py-1 shadow-sm fw-semibold text-uppercase" style="font-size: 0.72rem; letter-spacing: 0.5px;">Most Popular</span>
             <div>
-              <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-3 pt-1">
                 <h5 class="fw-bold mb-0">Daily Unlimited</h5>
                 <span class="badge bg-primary-soft text-primary">Day Trip</span>
               </div>
@@ -618,7 +619,7 @@
           <form class="needs-validation" novalidate data-success-msg="Thank you! You have subscribed to Rent o Ride updates.">
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="Enter your email" required>
-              <button class="btn btn-secondary-accent" type="submit"><i class="bi bi-send-fill"></i></button>
+              <button class="btn btn-primary" type="submit"><i class="bi bi-send-fill"></i></button>
             </div>
           </form>
           <div class="d-flex align-items-center gap-2 text-white-50 small">

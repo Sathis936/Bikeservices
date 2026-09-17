@@ -38,14 +38,16 @@
     font-size: 0.875rem;
   }
 
-  /* Booking Widget on Mobile */
-  .booking-widget-card {
+  /* Booking Widget & EV Finder on Mobile */
+  .booking-widget-card,
+  .ev-finder-card {
     padding: 1.15rem;
     margin-top: -1rem;
     border-radius: var(--radius-md);
   }
 
-  .booking-widget-card .row.g-3 {
+  .booking-widget-card .row.g-3,
+  .ev-finder-card .row.g-3 {
     --bs-gutter-y: 0.75rem;
   }
 
@@ -71,6 +73,11 @@
 
   .price-unit {
     font-size: 0.75rem;
+  }
+
+  /* Testimonial Cards on Mobile */
+  .testimonial-card {
+    padding: 1.35rem 1.25rem !important;
   }
 
   /* Mobile Navbar & Actions Alignment */

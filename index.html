@@ -161,15 +161,15 @@
           </div>
           <div class="d-flex flex-wrap align-items-center gap-3 pt-2">
             <div class="d-flex align-items-center gap-2">
-              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <i class="bi bi-check-circle-fill fs-5"></i>
               <span class="fw-semibold small">Instant Confirmation</span>
             </div>
             <div class="d-flex align-items-center gap-2">
-              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <i class="bi bi-check-circle-fill fs-5"></i>
               <span class="fw-semibold small">Zero Hidden Fees</span>
             </div>
             <div class="d-flex align-items-center gap-2">
-              <i class="bi bi-check-circle-fill text-success fs-5"></i>
+              <i class="bi bi-check-circle-fill fs-5"></i>
               <span class="fw-semibold small">Free Cancellation</span>
             </div>
           </div>
@@ -208,7 +208,7 @@
   <section class="container">
     <div class="booking-widget-card shadow-sm">
       <h5 class="fw-bold mb-3 d-flex align-items-center gap-2">
-        <i class="bi bi-search text-primary"></i> Find & Reserve Your Scooter
+        <i class="bi bi-search"></i> Find & Reserve Your Scooter
       </h5>
       <form id="bookingCalculatorForm" class="row g-3 align-items-end">
         <div class="col-lg-3 col-md-6">
@@ -225,7 +225,7 @@
           </select>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-2 col-md-6">
           <label for="calcPickupStation" class="booking-form-label"><i class="bi bi-geo-alt me-1"></i> Pick-up Station</label>
           <select id="calcPickupStation" class="form-select booking-form-control">
             <option selected>Downtown Hub (Station 1)</option>
@@ -245,8 +245,8 @@
           <input type="date" id="calcReturnDate" class="form-control booking-form-control" required>
         </div>
 
-        <div class="col-lg-2 col-md-12">
-          <button type="submit" class="btn btn-primary w-100 py-2 d-flex align-items-center justify-content-center gap-2" style="height: 46px;">
+        <div class="col-lg-3 col-md-12">
+          <button type="submit" class="btn btn-primary w-100 py-2 px-3 d-flex align-items-center justify-content-center gap-2 text-nowrap" style="min-height: 46px; height: auto;">
             <i class="bi bi-lightning-charge-fill"></i> Instant Reserve (<span id="calcGrandTotal">₹105</span>)
           </button>
         </div>
@@ -581,15 +581,18 @@
 
       <div class="swiper testimonials-swiper pb-5">
         <div class="swiper-wrapper">
+          <!-- Slide 1 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
-              <div class="star-rating mb-3">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <div class="testimonial-body">
+                <div class="star-rating mb-3">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "Renting the Vespa Primavera for my weekend coastal road trip was seamless. The online deposit was refunded immediately when I dropped it off!"
+                </p>
               </div>
-              <p class="text-muted fst-italic mb-4">
-                "Renting the Vespa Primavera for my weekend coastal road trip was seamless. The online deposit was refunded immediately when I dropped it off!"
-              </p>
-              <div class="d-flex align-items-center gap-3">
+              <div class="testimonial-author d-flex align-items-center gap-3">
                 <img src="assets/images/testimonials/avatar-1.jpg" alt="Alex Vance" class="rounded-circle" width="48" height="48">
                 <div>
                   <h6 class="fw-bold mb-0">Alex Vance</h6>
@@ -599,15 +602,18 @@
             </div>
           </div>
 
+          <!-- Slide 2 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
-              <div class="star-rating mb-3">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <div class="testimonial-body">
+                <div class="star-rating mb-3">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "The Niu electric scooter was whisper quiet and got me across the downtown financial district with zero traffic stress. Outstanding battery life!"
+                </p>
               </div>
-              <p class="text-muted fst-italic mb-4">
-                "The Niu electric scooter was whisper quiet and got me across the downtown financial district with zero traffic stress. Outstanding battery life!"
-              </p>
-              <div class="d-flex align-items-center gap-3">
+              <div class="testimonial-author d-flex align-items-center gap-3">
                 <img src="assets/images/testimonials/avatar-2.jpg" alt="Sophia Laurent" class="rounded-circle" width="48" height="48">
                 <div>
                   <h6 class="fw-bold mb-0">Sophia Laurent</h6>
@@ -617,19 +623,64 @@
             </div>
           </div>
 
+          <!-- Slide 3 -->
           <div class="swiper-slide">
             <div class="testimonial-card">
-              <div class="star-rating mb-3">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <div class="testimonial-body">
+                <div class="star-rating mb-3">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "We rented four Honda PCX 160s for our company team retreat. Delivery to our resort hotel was punctual and customer service was 10/10."
+                </p>
               </div>
-              <p class="text-muted fst-italic mb-4">
-                "We rented four Honda PCX 160s for our company team retreat. Delivery to our resort hotel was punctual and customer service was 10/10."
-              </p>
-              <div class="d-flex align-items-center gap-3">
+              <div class="testimonial-author d-flex align-items-center gap-3">
                 <img src="assets/images/testimonials/avatar-3.jpg" alt="Marcus Chen" class="rounded-circle" width="48" height="48">
                 <div>
                   <h6 class="fw-bold mb-0">Marcus Chen</h6>
                   <small class="text-muted">Corporate Client</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-body">
+                <div class="star-rating mb-3">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "Exploring coastal lookouts on the Yamaha Aerox was unforgettable. Booking online took under two minutes and the included phone mount made GPS routing effortless."
+                </p>
+              </div>
+              <div class="testimonial-author d-flex align-items-center gap-3">
+                <img src="assets/images/team/member-4.jpg" alt="Elena Rostova" class="rounded-circle" width="48" height="48">
+                <div>
+                  <h6 class="fw-bold mb-0">Elena Rostova</h6>
+                  <small class="text-muted">Weekend Adventurer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-body">
+                <div class="star-rating mb-3">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">
+                  "The monthly lease pass cut my daily downtown commute expenses in half. Free battery swaps at the transit station take literally 45 seconds. Best urban mobility service in town!"
+                </p>
+              </div>
+              <div class="testimonial-author d-flex align-items-center gap-3">
+                <img src="assets/images/team/member-2.jpg" alt="David Miller" class="rounded-circle" width="48" height="48">
+                <div>
+                  <h6 class="fw-bold mb-0">David Miller</h6>
+                  <small class="text-muted">Daily Commuter</small>
                 </div>
               </div>
             </div>

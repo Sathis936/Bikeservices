@@ -23,16 +23,23 @@
     if (document.querySelector('.testimonials-swiper') && window.Swiper) {
       new Swiper('.testimonials-swiper', {
         slidesPerView: 1,
-        spaceBetween: 24,
+        spaceBetween: 20,
         loop: true,
-        autoplay: { delay: 4500, disableOnInteraction: false },
+        autoHeight: false,
+        grabCursor: true,
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        autoplay: { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true },
         pagination: {
           el: '.swiper-pagination',
-          clickable: true
+          clickable: true,
+          dynamicBullets: true
         },
         breakpoints: {
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 }
+          576: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 24 },
+          992: { slidesPerView: 3, spaceBetween: 28 }
         }
       });
     }
