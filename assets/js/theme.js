@@ -177,62 +177,60 @@
 
       // 1. Sync Desktop Navbar Actions (.navbar-actions)
       document.querySelectorAll('.site-header .navbar-actions').forEach(actionsContainer => {
-        // Manage Dashboard Button
-        let dashBtn = actionsContainer.querySelector('.nav-dashboard-btn');
-        let loginBtn = actionsContainer.querySelector('.nav-login-btn');
+        // Skip mobile topbar actions
+        if (actionsContainer.classList.contains('d-xl-none')) return;
 
-        if (isLogged) {
-          if (!dashBtn) {
-            dashBtn = document.createElement('a');
-            dashBtn.href = 'customer-dashboard.html';
-            dashBtn.className = 'btn btn-sm btn-primary nav-dashboard-btn d-none d-sm-inline-flex align-items-center gap-1';
-            dashBtn.innerHTML = '<i class="bi bi-speedometer2"></i> Dashboard';
-            actionsContainer.insertBefore(dashBtn, actionsContainer.firstChild);
-          } else {
-            dashBtn.style.display = '';
-          }
-          if (loginBtn) loginBtn.style.display = 'none';
-        } else {
-          if (dashBtn) dashBtn.style.display = 'none';
-          if (!loginBtn) {
-            loginBtn = document.createElement('a');
-            loginBtn.href = 'login.html';
-            loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
-            loginBtn.innerHTML = '<i class="bi bi-box-arrow-in-right"></i> Sign In';
-            actionsContainer.insertBefore(loginBtn, actionsContainer.firstChild);
-          } else {
-            loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
-            loginBtn.style.display = '';
-          }
+        // Remove any profile icon dropdown if present
+        const profileDropdown = actionsContainer.querySelector('.dropdown');
+        if (profileDropdown && (profileDropdown.querySelector('.bi-person-circle') || profileDropdown.querySelector('.account-menu'))) {
+          profileDropdown.remove();
         }
 
-        // Manage Account Menu Dropdown (.account-menu)
-        const accountMenu = actionsContainer.querySelector('.account-menu');
-        if (accountMenu) {
-          if (isLogged) {
-            accountMenu.innerHTML = `
-              <li>
-                <div class="px-3 py-2 border-bottom">
-                  <div class="fw-bold text-dark small text-truncate">${user.name}</div>
-                  <div class="text-muted" style="font-size: 0.75rem;">${user.email}</div>
-                </div>
-              </li>
-              <li><a class="dropdown-item py-2 fw-semibold text-primary" href="customer-dashboard.html"><i class="bi bi-speedometer2 me-2"></i> Customer Dashboard</a></li>
-              <li><a class="dropdown-item py-2" href="active-rental.html"><i class="bi bi-lightning-charge-fill me-2 text-warning"></i> Active Ride</a></li>
-              <li><a class="dropdown-item py-2" href="my-bookings.html"><i class="bi bi-calendar2-check me-2 text-success"></i> My Bookings</a></li>
-              <li><a class="dropdown-item py-2" href="profile.html"><i class="bi bi-person-badge me-2 text-info"></i> Profile &amp; License</a></li>
-              <li><hr class="dropdown-divider my-1"></li>
-              <li><a class="dropdown-item py-2 text-danger" href="javascript:void(0)" onclick="window.RentORideAuth.logout()"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a></li>
-            `;
-          } else {
-            accountMenu.innerHTML = `
-              <li><h6 class="dropdown-header fw-bold small text-uppercase">My Account</h6></li>
-              <li><a class="dropdown-item py-2" href="login.html"><i class="bi bi-box-arrow-in-right me-2 text-primary"></i> Sign In</a></li>
-              <li><a class="dropdown-item py-2" href="register.html"><i class="bi bi-person-plus me-2 text-success"></i> Create Account</a></li>
-              <li><hr class="dropdown-divider my-1"></li>
-              <li><a class="dropdown-item py-2 text-muted small" href="admin-dashboard.html"><i class="bi bi-shield-lock me-2"></i> Admin Portal</a></li>
-            `;
-          }
+        // Manage Dashboard Button - ALWAYS visible before and after login
+        let dashBtn = actionsContainer.querySelector('.nav-dashboard-btn');
+        if (!dashBtn) {
+          dashBtn = document.createElement('a');
+          dashBtn.href = 'customer-dashboard.html';
+          actionsContainer.insertBefore(dashBtn, actionsContainer.firstChild);
+        }
+        dashBtn.href = 'customer-dashboard.html';
+        dashBtn.innerHTML = '<i class="bi bi-speedometer2"></i> Dashboard';
+        dashBtn.style.display = '';
+
+        // Manage Login & Logout Buttons
+        let loginBtn = actionsContainer.querySelector('.nav-login-btn');
+        let logoutBtn = actionsContainer.querySelector('.nav-logout-btn');
+
+        if (!loginBtn) {
+          loginBtn = document.createElement('a');
+          loginBtn.href = 'login.html';
+          dashBtn.insertAdjacentElement('afterend', loginBtn);
+        }
+        loginBtn.href = 'login.html';
+        loginBtn.innerHTML = '<i class="bi bi-box-arrow-in-right"></i> Sign In';
+
+        if (!logoutBtn) {
+          logoutBtn = document.createElement('button');
+          logoutBtn.type = 'button';
+          logoutBtn.onclick = () => window.RentORideAuth.logout();
+          loginBtn.insertAdjacentElement('afterend', logoutBtn);
+        }
+        logoutBtn.innerHTML = '<i class="bi bi-box-arrow-right"></i> Sign Out';
+
+        if (isLogged) {
+          dashBtn.className = 'btn btn-sm btn-primary nav-dashboard-btn d-none d-sm-inline-flex align-items-center gap-1';
+          loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none align-items-center gap-1';
+          loginBtn.style.display = 'none';
+
+          logoutBtn.className = 'btn btn-sm btn-outline-danger nav-logout-btn d-none d-sm-inline-flex align-items-center gap-1';
+          logoutBtn.style.display = '';
+        } else {
+          dashBtn.className = 'btn btn-sm btn-outline-primary nav-dashboard-btn d-none d-sm-inline-flex align-items-center gap-1';
+          loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
+          loginBtn.style.display = '';
+
+          logoutBtn.className = 'btn btn-sm btn-outline-danger nav-logout-btn d-none align-items-center gap-1';
+          logoutBtn.style.display = 'none';
         }
       });
 

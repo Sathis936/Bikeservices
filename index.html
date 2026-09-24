@@ -76,9 +76,15 @@
           </ul>
 
           <div class="d-flex align-items-center gap-2 navbar-actions">
+            <a href="customer-dashboard.html" class="btn btn-sm btn-outline-primary nav-dashboard-btn d-none d-sm-inline-flex align-items-center gap-1">
+              <i class="bi bi-speedometer2"></i> Dashboard
+            </a>
             <a href="login.html" class="btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1">
               <i class="bi bi-box-arrow-in-right"></i> Sign In
             </a>
+            <button type="button" class="btn btn-sm btn-outline-danger nav-logout-btn d-none align-items-center gap-1" onclick="window.RentORideAuth.logout()">
+              <i class="bi bi-box-arrow-right"></i> Sign Out
+            </button>
             <button type="button" class="btn btn-icon btn-outline-primary theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
               <i class="bi bi-moon-stars-fill"></i>
             </button>
@@ -87,16 +93,6 @@
               <i class="bi bi-heart"></i>
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger wishlist-count-badge">2</span>
             </a>
-            <div class="dropdown">
-              <button type="button" class="btn btn-icon btn-outline-primary" data-bs-toggle="dropdown" aria-expanded="false" title="My Account">
-                <i class="bi bi-person-circle"></i>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end account-menu">
-                <li><h6 class="dropdown-header fw-bold small text-uppercase">My Account</h6></li>
-                <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i> Login</a></li>
-                <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus me-2"></i> Sign Up</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

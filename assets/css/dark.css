@@ -60,6 +60,29 @@ body.dark-mode .dropdown-item:hover {
   color: #FFFFFF;
 }
 
+/* Nav Action & Primary Buttons High Contrast Text */
+[data-bs-theme="dark"] .btn-primary,
+body.dark-mode .btn-primary,
+[data-bs-theme="dark"] .nav-login-btn,
+body.dark-mode .nav-login-btn {
+  color: #FFFFFF !important;
+}
+
+[data-bs-theme="dark"] .btn-primary:hover,
+[data-bs-theme="dark"] .btn-primary:focus,
+[data-bs-theme="dark"] .btn-primary:active,
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-primary:focus,
+body.dark-mode .btn-primary:active,
+[data-bs-theme="dark"] .nav-login-btn:hover,
+[data-bs-theme="dark"] .nav-login-btn:focus,
+[data-bs-theme="dark"] .nav-login-btn:active,
+body.dark-mode .nav-login-btn:hover,
+body.dark-mode .nav-login-btn:focus,
+body.dark-mode .nav-login-btn:active {
+  color: #FFFFFF !important;
+}
+
 [data-bs-theme="dark"] .hero-section,
 body.dark-mode .hero-section {
   background: linear-gradient(135deg, #071A2F 0%, #0D2644 50%, #08283B 100%);
