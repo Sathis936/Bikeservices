@@ -87,7 +87,14 @@
             }
 
             if (window.RentORideAuth) {
-              window.RentORideAuth.login({ email, name }, redirectUrl || 'customer-dashboard.html');
+              window.RentORideAuth.login({ email, name }, null);
+              const alertEl = document.getElementById('loginStatusAlert');
+              if (alertEl) {
+                const nameEl = document.getElementById('loginStatusName');
+                if (nameEl) nameEl.textContent = name;
+                alertEl.classList.remove('d-none');
+                alertEl.classList.add('d-flex');
+              }
               return;
             }
           } else if (isProfileForm) {

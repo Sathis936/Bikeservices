@@ -74,8 +74,8 @@
 
     initFloatingWidget: function () {
       if (document.querySelector('.theme-floating-switcher')) return;
-      // Skip the floating widget when the page already has in-navbar toggles
-      if (document.querySelector('.site-header .theme-toggle-btn, .dashboard-topbar .theme-toggle-btn')) return;
+      // Skip the floating widget when the page already has in-navbar toggles or is an auth page
+      if (document.querySelector('.site-header .theme-toggle-btn, .dashboard-topbar .theme-toggle-btn, .auth-section')) return;
       const widget = document.createElement('div');
       widget.className = 'theme-floating-switcher no-print';
       widget.innerHTML = `
@@ -137,7 +137,7 @@
       return Boolean(this.getUser());
     },
 
-    login: function (userData, redirectUrl = 'customer-dashboard.html') {
+    login: function (userData, redirectUrl = null) {
       const user = {
         name: (userData && userData.name) || 'Alex Vance',
         email: (userData && userData.email) || 'alex.vance@example.com',
@@ -150,7 +150,7 @@
       };
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(user));
       if (window.RentORideToast) {
-        window.RentORideToast.show('Welcome Back!', 'Signed in successfully as ' + user.name, 'success');
+        window.RentORideToast.show('Dummy Sign In', 'Signed in successfully as ' + user.name + ' (Demo mode - No redirect)', 'success');
       }
       this.syncNavbar();
       if (redirectUrl) {
@@ -160,15 +160,22 @@
       }
     },
 
-    logout: function (redirectUrl = 'index.html') {
+    logout: function (redirectUrl = null) {
       localStorage.removeItem(this.STORAGE_KEY);
       if (window.RentORideToast) {
-        window.RentORideToast.show('Signed Out', 'You have been logged out successfully.', 'info');
+        window.RentORideToast.show('Signed Out', 'You have been logged out (Dummy mode).', 'info');
       }
       this.syncNavbar();
-      setTimeout(() => {
-        window.location.href = redirectUrl;
-      }, 500);
+      const loginAlert = document.getElementById('loginStatusAlert');
+      if (loginAlert) {
+        loginAlert.classList.add('d-none');
+        loginAlert.classList.remove('d-flex');
+      }
+      if (redirectUrl) {
+        setTimeout(() => {
+          window.location.href = redirectUrl;
+        }, 500);
+      }
     },
 
     syncNavbar: function () {
@@ -186,8 +193,11 @@
           profileDropdown.remove();
         }
 
-        // Manage Dashboard Button - ALWAYS visible before and after login
+        // Manage Dashboard, Login & Logout Buttons
         let dashBtn = actionsContainer.querySelector('.nav-dashboard-btn');
+        let loginBtn = actionsContainer.querySelector('.nav-login-btn');
+        let logoutBtn = actionsContainer.querySelector('.nav-logout-btn');
+
         if (!dashBtn) {
           dashBtn = document.createElement('a');
           dashBtn.href = 'customer-dashboard.html';
@@ -195,11 +205,6 @@
         }
         dashBtn.href = 'customer-dashboard.html';
         dashBtn.innerHTML = '<i class="bi bi-speedometer2"></i> Dashboard';
-        dashBtn.style.display = '';
-
-        // Manage Login & Logout Buttons
-        let loginBtn = actionsContainer.querySelector('.nav-login-btn');
-        let logoutBtn = actionsContainer.querySelector('.nav-logout-btn');
 
         if (!loginBtn) {
           loginBtn = document.createElement('a');
@@ -218,14 +223,20 @@
         logoutBtn.innerHTML = '<i class="bi bi-box-arrow-right"></i> Sign Out';
 
         if (isLogged) {
+          // Logged in: show Dashboard (solid primary) and Sign Out, hide Sign In
           dashBtn.className = 'btn btn-sm btn-primary nav-dashboard-btn d-none d-sm-inline-flex align-items-center gap-1';
+          dashBtn.style.display = '';
+
           loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none align-items-center gap-1';
           loginBtn.style.display = 'none';
 
           logoutBtn.className = 'btn btn-sm btn-outline-danger nav-logout-btn d-none d-sm-inline-flex align-items-center gap-1';
           logoutBtn.style.display = '';
         } else {
+          // Logged out: show Dashboard (outline) and Sign In (solid primary), hide Sign Out
           dashBtn.className = 'btn btn-sm btn-outline-primary nav-dashboard-btn d-none d-sm-inline-flex align-items-center gap-1';
+          dashBtn.style.display = '';
+
           loginBtn.className = 'btn btn-sm btn-primary nav-login-btn d-none d-sm-inline-flex align-items-center gap-1';
           loginBtn.style.display = '';
 
@@ -239,11 +250,41 @@
       if (offcanvas) {
         const offcanvasBody = offcanvas.querySelector('.offcanvas-body');
         if (offcanvasBody) {
-          let authBlock = offcanvasBody.querySelector('.offcanvas-auth-block');
+          // Remove any Admin Dashboard link in offcanvas
+          offcanvasBody.querySelectorAll('a[href*="admin-dashboard"]').forEach(a => a.remove());
+
+          // Clean up section headings if needed
+          offcanvasBody.querySelectorAll('h6').forEach(h => {
+            if (h.textContent.includes('Dashboards')) {
+              h.textContent = 'Dashboard';
+            }
+          });
+
+          // Sync Customer Dashboard button in offcanvas (always visible)
+          const offcanvasDashBtn = offcanvasBody.querySelector('.offcanvas-dashboard-btn, a[href*="customer-dashboard.html"]');
+          if (offcanvasDashBtn) {
+            const offcanvasDashSection = offcanvasDashBtn.closest('.mb-4');
+            if (offcanvasDashSection) offcanvasDashSection.style.display = '';
+            offcanvasDashBtn.className = isLogged
+              ? 'btn btn-primary text-start offcanvas-dashboard-btn'
+              : 'btn btn-outline-primary text-start offcanvas-dashboard-btn';
+          }
+
+          // Locate or create single offcanvas-auth-block
+          const allAuthBlocks = offcanvasBody.querySelectorAll('.offcanvas-auth-block, .border-top.d-grid');
+          let authBlock = allAuthBlocks[0];
+
+          // Remove any accidental duplicate auth blocks
+          for (let i = 1; i < allAuthBlocks.length; i++) {
+            allAuthBlocks[i].remove();
+          }
+
           if (!authBlock) {
             authBlock = document.createElement('div');
             authBlock.className = 'offcanvas-auth-block pt-3 border-top d-grid gap-2 mt-auto';
             offcanvasBody.appendChild(authBlock);
+          } else {
+            authBlock.className = 'offcanvas-auth-block pt-3 border-top d-grid gap-2 mt-auto';
           }
 
           if (isLogged) {
@@ -257,7 +298,6 @@
                   </div>
                 </div>
               </div>
-              <a href="customer-dashboard.html" class="btn btn-primary text-start"><i class="bi bi-speedometer2 me-2"></i> Customer Dashboard</a>
               <a href="active-rental.html" class="btn btn-outline-primary text-start"><i class="bi bi-lightning-charge me-2"></i> Active Ride</a>
               <a href="profile.html" class="btn btn-outline-secondary text-start"><i class="bi bi-person-badge me-2"></i> Profile &amp; License</a>
               <button type="button" class="btn btn-outline-danger text-start" onclick="window.RentORideAuth.logout()"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</button>
