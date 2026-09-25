@@ -149,28 +149,25 @@
         licenseVerified: true
       };
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(user));
-      if (window.RentORideToast) {
-        window.RentORideToast.show('Dummy Sign In', 'Signed in successfully as ' + user.name + ' (Demo mode - No redirect)', 'success');
-      }
       this.syncNavbar();
-      if (redirectUrl) {
+
+      if (window.RentORideToast) {
+        window.RentORideToast.show('Sign In Successful', 'Signed in successfully as ' + user.name + '!', 'success');
+      }
+
+      if (redirectUrl && redirectUrl !== 'login.html') {
         setTimeout(() => {
           window.location.href = redirectUrl;
-        }, 500);
+        }, 800);
       }
     },
 
     logout: function (redirectUrl = null) {
       localStorage.removeItem(this.STORAGE_KEY);
       if (window.RentORideToast) {
-        window.RentORideToast.show('Signed Out', 'You have been logged out (Dummy mode).', 'info');
+        window.RentORideToast.show('Signed Out', 'You have been logged out successfully.', 'info');
       }
       this.syncNavbar();
-      const loginAlert = document.getElementById('loginStatusAlert');
-      if (loginAlert) {
-        loginAlert.classList.add('d-none');
-        loginAlert.classList.remove('d-flex');
-      }
       if (redirectUrl) {
         setTimeout(() => {
           window.location.href = redirectUrl;

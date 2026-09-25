@@ -26,8 +26,9 @@
       };
       const icon = iconMap[type] || iconMap.primary;
 
+      const borderClass = type === 'success' ? 'border-start border-4 border-success' : '';
       const toastEl = document.createElement('div');
-      toastEl.className = 'toast show shadow-lg border-0';
+      toastEl.className = 'toast show shadow-lg border-0 ' + borderClass;
       toastEl.id = toastId;
       toastEl.setAttribute('role', 'alert');
       toastEl.setAttribute('aria-live', 'assertive');
@@ -87,14 +88,7 @@
             }
 
             if (window.RentORideAuth) {
-              window.RentORideAuth.login({ email, name }, null);
-              const alertEl = document.getElementById('loginStatusAlert');
-              if (alertEl) {
-                const nameEl = document.getElementById('loginStatusName');
-                if (nameEl) nameEl.textContent = name;
-                alertEl.classList.remove('d-none');
-                alertEl.classList.add('d-flex');
-              }
+              window.RentORideAuth.login({ email, name }, redirectUrl);
               return;
             }
           } else if (isProfileForm) {

@@ -44,15 +44,7 @@
           <p class="text-muted small mb-0">Sign in to manage your scooter rentals &amp; receipts</p>
         </div>
 
-        <div id="loginStatusAlert" class="alert alert-success d-none align-items-center gap-2 py-2 mt-2 mb-3" role="alert">
-          <i class="bi bi-check-circle-fill fs-5 text-success"></i>
-          <div class="small">
-            <div><strong>Dummy Sign-In Active:</strong> Signed in as <span id="loginStatusName">Alex Vance</span>.</div>
-            <div class="text-muted">No redirect occurred. Session and navbar updated. You can click <a href="customer-dashboard.html" class="fw-bold text-success text-decoration-underline">Dashboard</a> or browse to <a href="index.html" class="fw-bold text-success text-decoration-underline">Home</a>.</div>
-          </div>
-        </div>
-
-        <form class="needs-validation" novalidate data-success-msg="Signed in successfully! (Dummy Mode - No redirect)">
+        <form class="needs-validation" novalidate data-success-msg="Signed in successfully!">
           <div class="mb-3">
             <label class="form-label small fw-bold text-muted">Email Address</label>
             <input type="email" class="form-control" value="alex.vance@example.com" required>
@@ -76,7 +68,7 @@
 
           <button type="submit" class="btn btn-primary w-100 py-2 mb-2"><i class="bi bi-box-arrow-in-right me-1"></i> Sign In</button>
           
-          <button type="button" class="btn btn-outline-success w-100 py-2 mb-2 fw-semibold" onclick="window.RentORideAuth.login({ name: 'Alex Vance', email: 'alex.vance@example.com' }, null); const al = document.getElementById('loginStatusAlert'); if (al) { const nm = document.getElementById('loginStatusName'); if (nm) nm.textContent = 'Alex Vance'; al.classList.remove('d-none'); al.classList.add('d-flex'); }">
+          <button type="button" class="btn btn-outline-success w-100 py-2 mb-2 fw-semibold" onclick="window.RentORideAuth.login({ name: 'Alex Vance', email: 'alex.vance@example.com' })">
             <i class="bi bi-lightning-charge-fill me-1"></i> 1-Click Demo Sign In (Alex Vance)
           </button>
         </form>
@@ -89,6 +81,8 @@
   </div>
 </main>
 
+  <!-- Toast Notification Popup Container -->
+  <div id="rentorideToastContainer" class="toast-container position-fixed top-0 start-50 translate-middle-x p-3 pt-4" style="z-index: 9999;"></div>
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
@@ -98,19 +92,5 @@
   <script src="assets/js/booking.js"></script>
   <script src="assets/js/dashboard.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window.RentORideAuth && window.RentORideAuth.isLoggedIn()) {
-        const user = window.RentORideAuth.getUser();
-        const al = document.getElementById('loginStatusAlert');
-        const nm = document.getElementById('loginStatusName');
-        if (al) {
-          if (nm && user) nm.textContent = user.name;
-          al.classList.remove('d-none');
-          al.classList.add('d-flex');
-        }
-      }
-    });
-  </script>
 </body>
 </html>
